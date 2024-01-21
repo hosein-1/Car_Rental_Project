@@ -48,7 +48,7 @@ class Reservation(models.Model):
     ]
     customer = models.ForeignKey(Customer, on_delete=models.PROTECT)
     car = models.ForeignKey(Car, on_delete=models.PROTECT)
-    driver = models.ForeignKey(Driver, on_delete=models.PROTECT)
+    driver = models.ForeignKey(Driver, on_delete=models.PROTECT, blank=True)
     start_date = jmodels.jDateTimeField(auto_now_add=True)
     end_date = jmodels.jDateTimeField(auto_now_add=True)
     delivery_address = models.CharField(max_length=500)
