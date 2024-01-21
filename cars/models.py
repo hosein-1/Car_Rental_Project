@@ -30,6 +30,10 @@ class Car(models.Model):
 
 
 class Driver(models.Model):
+    driver = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     work_experience = models.CharField(max_length=255)
     certificate_base = models.CharField(max_length=255)
+
+    def __str__(self):
+        return f'{self.driver.first_name} {self.driver.last_name}'
 
