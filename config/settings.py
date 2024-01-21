@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts.apps.AccountsConfig',
     'cars.apps.CarsConfig',
+    'pages.apps.PagesConfig',
     'django_jalali',
 
 
