@@ -19,7 +19,7 @@ class Category(models.Model):
 
 
 class Car(models.Model):
-    category = models.ForeignKey(Category, on_delete=models.SET_NULL)
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=255)
     model = models.CharField(max_length=500)
     number_plate = models.CharField(max_length=255)
