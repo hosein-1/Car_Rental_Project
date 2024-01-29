@@ -32,7 +32,7 @@ class Car(models.Model):
     model = models.CharField(max_length=500)
     number_plate = models.CharField(max_length=255)
     color = models.CharField(max_length=255)
-    price = models.PositiveIntegerField(blank=True)
+    price = models.PositiveIntegerField(blank=True, null=True)
 
     class Meta:
         verbose_name = 'ماشین'
