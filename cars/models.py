@@ -47,6 +47,10 @@ class Driver(models.Model):
     work_experience = models.CharField(max_length=255)
     certificate_base = models.CharField(max_length=255)
 
+    class Meta:
+        verbose_name = 'راننده'
+        verbose_name_plural = 'راننده'
+
     def __str__(self):
         return f'{self.user.first_name} {self.user.last_name}'
 
