@@ -21,3 +21,8 @@ class CarAdmin(admin.ModelAdmin):
 @admin.register(models.Driver)
 class DriverAdmin(admin.ModelAdmin):
     list_display = ['user', 'work_experience', 'certificate_base']
+
+
+@admin.register(models.Reservation)
+class Reservation(admin.ModelAdmin):
+    list_display = ['customer', 'car', 'driver', 'is_paid']
