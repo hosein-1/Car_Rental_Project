@@ -6,6 +6,10 @@ from django_jalali.db import models as jmodels
 class Customer(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
+    class Meta:
+        verbose_name = 'مشتری'
+        verbose_name_plural = 'مشتری'
+
     def __str__(self):
         return f'{self.user.first_name} {self.user.last_name}'
 
