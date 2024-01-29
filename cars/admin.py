@@ -16,3 +16,8 @@ class CategoryAdmin(admin.ModelAdmin):
 @admin.register(models.Car)
 class CarAdmin(admin.ModelAdmin):
     list_display = ['name', 'category', 'model', 'color', 'price']
+
+
+@admin.register(models.Driver)
+class DriverAdmin(admin.ModelAdmin):
+    list_display = ['user', 'work_experience', 'certificate_base']
