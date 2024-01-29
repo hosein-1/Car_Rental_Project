@@ -34,6 +34,10 @@ class Car(models.Model):
     color = models.CharField(max_length=255)
     price = models.PositiveIntegerField(blank=True)
 
+    class Meta:
+        verbose_name = 'ماشین'
+        verbose_name_plural = 'ماشین'
+
     def __str__(self):
         return f'{self.name}'
 
