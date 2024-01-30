@@ -9,7 +9,7 @@
         {{ car.name }}
         {{ car.model }}
         {{ car.color }}
-        <a href="">مشاهده جزییات</a>
+        <a href="{% url 'car_detail' car.id %}">مشاهده جزییات</a>
     {% endfor %}
 
 

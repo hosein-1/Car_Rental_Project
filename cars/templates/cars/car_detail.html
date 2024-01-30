@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Car Detail{% endblock title %}
+
+
+{% block body %}
+
+        {{ car.number_plate }}
+        {{ car.name }}
+        {{ car.model }}
+        {{ car.color }}
+
+        {% if user.is_authenticated %}
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="رزرو">
+            </form>
+
+        {% else %}
+            <p>برای رزرو ماشین ابتدا وارد شوید.</p>
+            <a href="{% url 'login' %}">ورود</a>
+            <a href="{% url 'signup' %}">ثبت نام</a>
+        {% endif %}
+
+
+
+{% endblock body %}
