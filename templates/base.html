@@ -1,18 +1,44 @@
-<!doctype html>
+{% load static %}
+
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
 
-    <title>{% block title %}{% endblock title %}</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
 
-  </head>
+  <title>{% block title %}{% endblock title %}</title>
 
-  <body>
+  <link rel="stylesheet" href="{% static 'style/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'style/bootstrap-icons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'style/main-style.css' %}">
 
-    {% block body %}
-    {% endblock body %}
+</head>
+
+<body>
+
+  {% include 'navbar.html' %}
+
+  {% if banner != False %}
+  {% include 'banner.html' %}
+  {% endif %}
 
 
-  </body>
+  {% block body %}
+  {% endblock body %}
+
+
+  {% include 'sidebar-horizontal.html' %}
+  {% include 'footer.html' %}
+
+
+  <script src="{% static 'script/jquery-3.5.1.js' %}"></script>
+  <script src="{% static 'script/bootstrap.js' %}"></script>
+  <script src="{% static 'script/main-script.js' %}"></script>
+
+  {% block script %}
+
+  {% endblock %}
+</body>
+
 </html>
