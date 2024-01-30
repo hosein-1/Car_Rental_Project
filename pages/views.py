@@ -28,3 +28,6 @@ def ask_question(request):
         form = QuestionForm()
         return render(request, 'pages/questions.html', {'form': form, 'questions': questions})
 
+
+def about_us_view(request):
+    return render(request, 'pages/about_us.html')
