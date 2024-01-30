@@ -5,15 +5,20 @@
 
 {% block body %}
     {% for car_reserve in cars_reserve %}
-{#        {% if car_reserve.driver %}#}
-{#            {{ car_reserve.driver }}#}
-{#         {% else %}#}
-{#            <span>بدون راننده</span>#}
-{#        {% endif %}#}
+        {% if car_reserve.driver %}
+            {{ car_reserve.driver }}
+         {% else %}
+            <span>بدون راننده</span>
+        {% endif %}
         {{ user.username }}
         {{ car_reserve.car.name }}
         {{ car_reserve.delivery_address }}
     {% endfor %}
-
-
+<h5>اطلاعات کاربری</h5>
+    username:<div>{{ user.username }}</div>
+    first_name: <div>{{ user.first_name }}</div>
+    last_name: <div>{{ user.last_name }}</div>
+    age: <div>{{ user.age }}</div>
+<h5>تغییر پسورد</h5>
+    <a href="{% url 'password_change' %}">تغییر پسورد</a>
 {% endblock body %}
