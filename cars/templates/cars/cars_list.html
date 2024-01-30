@@ -4,13 +4,42 @@
 
 
 {% block body %}
-    {% for car in cars %}
-        {{ car.number_plate }}
-        {{ car.name }}
-        {{ car.model }}
-        {{ car.color }}
-        <a href="{% url 'car_detail' car.id %}">مشاهده جزییات</a>
-    {% endfor %}
+<div class="div-mid my-5">
+    <div class="container my-5">
+        <div class="row">
+            <h1>ماشین را انتخاب کن</h1>
+        </div>
+        <div class="card-body">
+            {% for car in cars %}
+            <div class="card-car">
 
-
+                <div class="col-12">
+                    <img src="./img/kia-cerato-.png" alt="">
+                </div>
+                <div class="col-12">
+                    <h5>{{ car.name }}</h5>
+                    <p><i class="bi bi-asterisk"></i>{{ car.model }}</p>
+                    <p><i class="bi bi-tags-fill"></i>{{ car.category.name }}</p>
+                    <div class="card-price">
+                        {{ car.Price }}<br>
+                        <span>
+                            میلیون تومان<br>
+                            روزانه
+                        </span>
+                    </div>
+                    <div class="card-button">
+                        <div class="card-border"></div>
+                        <a href="{% url 'car_detail' car.id %}" class="btn-primary">رزرو ماشین</a>
+                        <div class="card-border"></div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row" style="float: left;">
+            <div class=""><a href="{% url 'cars_list' %}" class="btn btn-outline-primary">مشاهده موارد بیشتر...</a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock body %}
