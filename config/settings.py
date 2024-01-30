@@ -111,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'fa'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/tehran'
 
 USE_I18N = True
 
@@ -134,8 +134,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = "accounts.CustomUser"
 
 # Log In and Log out redirect Config
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'cars_list'
+LOGOUT_REDIRECT_URL = 'cars_list'
 
 # Email config
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
