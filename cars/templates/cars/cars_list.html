@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Cars List{% endblock title %}
+
+
+{% block body %}
+    {% for car in cars %}
+        {{ car.number_plate }}
+        {{ car.name }}
+        {{ car.model }}
+        {{ car.color }}
+        <a href="">مشاهده جزییات</a>
+    {% endfor %}
+
+
+{% endblock body %}
