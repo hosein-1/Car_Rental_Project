@@ -68,7 +68,7 @@ class Reservation(models.Model):
     start_date = jmodels.jDateTimeField(auto_now_add=True)
     end_date = jmodels.jDateTimeField(auto_now_add=True)
     delivery_address = models.CharField(max_length=500)
-    is_paid = models.CharField(max_length=6, choices=PAYMENT_STATUS, default=PAID)
+    is_paid = models.CharField(max_length=6, choices=PAYMENT_STATUS, default=UNPAID)
 
     class Meta:
         verbose_name = 'رزرو'
