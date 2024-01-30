@@ -2,3 +2,5 @@
 !*/migrations/__init__.py
 __pycache__/
 *.sqlite3
+Pipfile
+Pipfile.lock
