@@ -1,0 +1,550 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    font-size: calc(3.5rem + 2vw);
+}
+
+h3 {
+    font-size: calc(2.5rem + 1vw);
+}
+
+h4 {
+    font-size: calc(1.5rem + 0.5vw);
+}
+
+.over-auto {
+    overflow: auto;
+}
+
+
+.mt-6 {
+    margin-top: 6rem !important;
+}
+
+.mb-10 {
+    margin-bottom: 10rem !important;
+}
+
+.w10d {
+    width: 10%;
+}
+
+.w20d {
+    width: 20%;
+}
+
+.w30d {
+    width: 30%;
+}
+
+.w50d {
+    width: 50%;
+}
+
+.w100d {
+    width: 100%;
+}
+
+.h100d {
+    height: 100%;
+}
+
+.pos-abs {
+    position: absolute !important;
+}
+
+.pos-rel {
+    position: relative !important;
+}
+
+.ds-flex, .flex {
+    display: flex;
+}
+
+.ds-inline {
+    display: inline-block;
+}
+
+.f-item-center {
+    align-items: center;
+}
+
+.f-justify-center {
+    justify-content: center;
+}
+
+.f-justify-between {
+    justify-content: space-between;
+}
+
+.fs-1em {
+    font-size: 1em;
+}
+
+.fs-2em {
+    font-size: 2em;
+}
+
+.fs-3em {
+    font-size: 3em;
+}
+
+.fs-4em {
+    font-size: 4em;
+}
+
+.fs-5em {
+    font-size: 5em;
+}
+
+.fs-6em {
+    font-size: 6em;
+}
+
+.fs-7em {
+    font-size: 7em;
+}
+
+.fs-8em {
+    font-size: 8em;
+}
+
+.fs-9em {
+    font-size: 9em;
+}
+
+.fs-10em {
+    font-size: 10em;
+}
+
+.fs-11em {
+    font-size: 11em;
+}
+
+.fs-12em {
+    font-size: 12em;
+}
+
+.fs-13em {
+    font-size: 13em;
+}
+
+.fs-14em {
+    font-size: 14em;
+}
+
+.fs-15em {
+    font-size: 15em;
+}
+
+.fs-16em {
+    font-size: 16em;
+}
+
+.fs-17em {
+    font-size: 17em;
+}
+
+.fs-18em {
+    font-size: 18em;
+}
+
+.fs-19em {
+    font-size: 19em;
+}
+
+.fs-20em {
+    font-size: 20em;
+}
+
+.fs-0d5em {
+    font-size: 0.5em;
+}
+
+.fs-1d5em {
+    font-size: 1.5em;
+}
+
+.fs-2d5em {
+    font-size: 2.5em;
+}
+
+.fs-3d5em {
+    font-size: 3.5em;
+}
+
+.fs-4d5em {
+    font-size: 4.5em;
+}
+
+.fs-5d5em {
+    font-size: 5.5em;
+}
+
+.fs-6d5em {
+    font-size: 6.5em;
+}
+
+.fs-7d5em {
+    font-size: 7.5em;
+}
+
+.fs-8d5em {
+    font-size: 8.5em;
+}
+
+.fs-9d5em {
+    font-size: 9.5em;
+}
+
+.fs-10px {
+    font-size: 10px;
+}
+
+.fs-11px {
+    font-size: 11px;
+}
+
+.fs-12px {
+    font-size: 12px;
+}
+
+.fs-13px {
+    font-size: 13px;
+}
+
+.fs-14px {
+    font-size: 14px;
+}
+
+.fs-15px {
+    font-size: 15px;
+}
+
+.fs-16px {
+    font-size: 16px;
+}
+
+.fs-17px {
+    font-size: 17px;
+}
+
+.fs-18px {
+    font-size: 18px;
+}
+
+.fs-19px {
+    font-size: 19px;
+}
+
+.fs-20px {
+    font-size: 20px;
+}
+
+.fs-21px {
+    font-size: 21px;
+}
+
+.fs-22px {
+    font-size: 22px;
+}
+
+.fs-23px {
+    font-size: 23px;
+}
+
+.fs-24px {
+    font-size: 24px;
+}
+
+.fs-25px {
+    font-size: 25px;
+}
+
+.fs-26px {
+    font-size: 26px;
+}
+
+.fs-27px {
+    font-size: 27px;
+}
+
+.fs-28px {
+    font-size: 28px;
+}
+
+.fs-29px {
+    font-size: 29px;
+}
+
+.fs-30px {
+    font-size: 30px;
+}
+
+.fs-31px {
+    font-size: 31px;
+}
+
+.fs-32px {
+    font-size: 32px;
+}
+
+.fs-33px {
+    font-size: 33px;
+}
+
+.fs-34px {
+    font-size: 34px;
+}
+
+.fs-35px {
+    font-size: 35px;
+}
+
+.fs-36px {
+    font-size: 36px;
+}
+
+.fs-37px {
+    font-size: 37px;
+}
+
+.fs-38px {
+    font-size: 38px;
+}
+
+.fs-39px {
+    font-size: 39px;
+}
+
+.fs-40px {
+    font-size: 40px;
+}
+
+.fs-41px {
+    font-size: 41px;
+}
+
+.fs-42px {
+    font-size: 42px;
+}
+
+.fs-43px {
+    font-size: 43px;
+}
+
+.fs-44px {
+    font-size: 44px;
+}
+
+.fs-45px {
+    font-size: 45px;
+}
+
+.fs-46px {
+    font-size: 46px;
+}
+
+.fs-47px {
+    font-size: 47px;
+}
+
+.fs-48px {
+    font-size: 48px;
+}
+
+.fs-49px {
+    font-size: 49px;
+}
+
+
+
+/* sm breakpoint */
+@media (min-width: 576px) {
+    .mt-sm-6 {
+        margin-top: 6rem !important;
+    }
+}
+
+/* md breakpoint */
+@media (min-width: 768px) {
+    .mt-md-6 {
+        margin-top: 6rem !important;
+    }
+}
+
+/* lg breakpoint */
+@media (min-width: 992px) {
+    .mt-lg-6 {
+        margin-top: 6rem !important;
+    }
+}
+
+/* xl breakpoint */
+@media (min-width: 1200px) {
+    .mt-xl-6 {
+        margin-top: 6rem !important;
+    }
+}
+
+#banner-header div.div-img {
+    background-image: url(../img/hero.jpg);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#banner-header div.div-img>img {
+    width: 90%;
+}
+
+#footer {
+    background-color: #D2D2D2;
+}
+
+#sidebar-hor {
+    display: flex;
+}
+
+.div-mid {
+    display: flex;
+    background-color: #F8F8F8;
+}
+
+.card-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card-car {
+    --card-background-one: #212529;
+    --card-background-two: #fff;
+    --card-border-color: #898989;
+    --card-border-width: 1px;
+    --card-radius: 6px;
+    width: 325px;
+    margin: 7px;
+    padding: 0;
+    border: var(--card-border-width) solid var(--card-border-color);
+    border-radius: var(--card-radius);
+    color: #fff;
+}
+
+.card-car>div {
+    padding: 7px;
+}
+
+.card-car>div:first-child {
+    overflow: hidden;
+}
+
+.card-car>div:first-child img {
+    width: 100%;
+}
+
+.card-car>div:nth-child(2) {
+    position: relative;
+    background-color: var(--card-background-one);
+    border-top: var(--card-border-width) solid var(--card-border-color);
+    border-bottom-left-radius: var(--card-radius);
+    border-bottom-right-radius: var(--card-radius);
+}
+
+.card-car>div:nth-child(2) p {
+    margin: 0;
+    line-height: 25px;
+}
+
+.card-car>div:nth-child(2) p>i {
+    margin-left: 7px;
+}
+
+.card-car>div:nth-child(2) h5 {
+    color: #f71b6a;
+    width: 65%;
+}
+
+.card-car>div:nth-child(2) .card-price>span {
+    font-size: 15px;
+}
+
+.card-car>div:nth-child(2) .card-price {
+    position: absolute;
+    --height: 65px;
+    height: var(--height);
+    top: calc((var(--height) /2 * -1));
+    left: 15px;
+    padding: 3px 10px;
+    /* background-color: var(--card-background-one); */
+    background-color: #20cf4e;
+    border: var(--card-border-width) solid var(--card-border-color);
+    border-radius: var(--card-radius);
+    text-align: center;
+    line-height: 17px;
+    font-weight: bold;
+}
+
+.card-car>div:nth-child(2) .card-button {
+    display: block;
+    position: absolute;
+    min-height: 30px;
+    min-width: 120px;
+    left: -1px;
+    bottom: -1px;
+    padding: 6px 5px 0 0;
+    border: 0px solid var(--card-border-color);
+    border-top-width: var(--card-border-width);
+    border-right-width: var(--card-border-width);
+    border-top-right-radius: var(--card-radius);
+    background-color: var(--card-background-two);
+    line-height: 30px;
+    text-align: center;
+}
+
+.card-car>div:nth-child(2) .card-button>a {
+    display: inline-block;
+    min-width: 113px;
+    min-height: 24px;
+    padding: 4px;
+    /* border: var(--card-border-width) solid var(--card-border-color); */
+    border-top-right-radius: var(--card-radius);
+    border-bottom-left-radius: var(--card-radius);
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.card-car>div:nth-child(2) .card-button>.card-border {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: var(--card-background-two);
+}
+
+.card-car>div:nth-child(2) .card-button>.card-border::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    border: 0px solid var(--card-border-color);
+    border-left-width: var(--card-border-width);
+    border-bottom-width: var(--card-border-width);
+    border-bottom-left-radius: var(--card-radius);
+    background-color: var(--card-background-one);
+
+}
+
+.card-car>div:nth-child(2) .card-button>.card-border:first-child {
+    left: 0;
+    top: -10px;
+}
+
+.card-car>div:nth-child(2) .card-button>.card-border:last-child {
+    right: -10px;
+    bottom: 0px;
+}
