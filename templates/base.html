@@ -19,22 +19,14 @@
 
 <body>
 
+  {% block block_header %}
   {% include 'navbar.html' %}
-
   {% if banner != False %}
   {% include 'banner.html' %}
   {% endif %}
+  {% endblock %}
 
 
-    {# Note: log out works with post request!!!! #}
-    {% if user.is_authenticated %}
-        <form method="post" action="{% url 'logout' %}">
-            {% csrf_token %}
-            <input type="submit" value="خروج">
-        </form>
-    {% else %}
-        <a href="{% url 'login' %}">وارد شوید</a>
-    {% endif %}
   {% block body %}
   {% endblock body %}
 

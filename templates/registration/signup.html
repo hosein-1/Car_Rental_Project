@@ -2,11 +2,28 @@
 
 {% block title %}Signu Up{% endblock title %}
 
+{% block block_header %}
+{% with banner=False %}
+{{ block.super }}
+{% endwith %}
+{% endblock %}
 
 {% block body %}
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="button" value="Sign Up">
-    </form>
+    <div class="div-mid">
+        <div class="container my-5">
+            <div class="row big-card">
+                <div class="col-6 row mx-auto">
+                    <div class="col-3 big-card-right"></div>
+                    <div class="col-9 big-card-left">
+                        <h4 class="mb-5">ثبت نام در سایت</h4>
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <input type="button" value="Sign Up">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock body %}
