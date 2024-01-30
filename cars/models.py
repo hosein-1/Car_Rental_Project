@@ -4,7 +4,6 @@ from django_jalali.db import models as jmodels
 from datetime import timedelta, datetime
 
 
-
 class Customer(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
@@ -66,7 +65,7 @@ class Reservation(models.Model):
     ]
     customer = models.ForeignKey(Customer, on_delete=models.PROTECT)
     car = models.ForeignKey(Car, on_delete=models.PROTECT)
-    driver = models.ForeignKey(Driver, on_delete=models.PROTECT, blank=True)
+    driver = models.ForeignKey(Driver, on_delete=models.PROTECT, blank=True, null=True)
     start_date = jmodels.jDateField(default=datetime.today())
     end_date = jmodels.jDateField(default=datetime.today() + timedelta(days=2))
     delivery_address = models.CharField(max_length=500)
