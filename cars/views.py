@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
+
 
 from .models import Car, Customer, Reservation
 from .forms import ReservationForm
@@ -16,8 +18,21 @@ def home(request):
 
 def cars_list(request):
     cars = Car.objects.all()
+
+    paginator = Paginator(cars, 12)
+    page_number = request.GET.get('page', 1)
+    try:
+        cars = paginator.page(page_number)
+    except EmptyPage:
+        cars = paginator.page(paginator.num_pages)
+    except PageNotAnInteger:
+        cars = paginator.page(1)
+
     context = {
         'cars': cars,
+        'page': cars,
+        'last_page': max(cars.paginator.page_range),
+        'pagens': range(cars.number -4 , cars.number + 5),
     }
     return render(request, 'cars/cars_list.html', context)
 
@@ -63,6 +78,8 @@ def search(request):
         object_list = Car.objects.filter(
             Q(name__icontains=query) | Q(category__name__icontains=query) | Q(model__icontains=query)
         )
+    else:
+        object_list = None
 
     context = {
         'object_list': object_list,
