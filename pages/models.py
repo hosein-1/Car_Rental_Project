@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 
 class Page(models.Model):
@@ -18,6 +19,7 @@ class Page(models.Model):
 class Questions(models.Model):
     parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE, related_name='replies')
     body = models.TextField()
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
     @property
     def children(self):
