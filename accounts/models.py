@@ -14,7 +14,7 @@ class CustomUser(AbstractUser):
     national_code = models.CharField(max_length=20)
     phone_number = models.CharField(max_length=20)
     address = models.CharField(max_length=500)
-    age = models.PositiveIntegerField(default=None)
+    age = models.PositiveIntegerField(blank=True, null=True)
     user_type = models.CharField(max_length=1, choices=USER_STATUS, default=CUSTOMER)
 
 
