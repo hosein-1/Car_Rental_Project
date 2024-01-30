@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Car Detail{% endblock title %}
+
+
+{% block body %}
+    {% if object_list %}
+    {% for car in object_list %}
+        <a href="{% url 'car_detail' car.id %}">{{ car.name }}</a>
+    {% endfor %}
+    {% else %}
+        <p>نتیجه ای یافت نشد.</p>
+    {% endif %}
+
+{% endblock body %}
