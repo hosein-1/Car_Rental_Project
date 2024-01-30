@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Profile{% endblock title %}
+
+
+{% block body %}
+    {% for car_reserve in cars_reserve %}
+{#        {% if car_reserve.driver %}#}
+{#            {{ car_reserve.driver }}#}
+{#         {% else %}#}
+{#            <span>بدون راننده</span>#}
+{#        {% endif %}#}
+        {{ user.username }}
+        {{ car_reserve.car.name }}
+        {{ car_reserve.delivery_address }}
+    {% endfor %}
+
+
+{% endblock body %}

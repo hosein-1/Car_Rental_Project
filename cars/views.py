@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.views.decorators.http import require_POST
+from django.contrib.auth.decorators import login_required
 
-from .models import Car, Customer
+from .models import Car, Customer, Reservation
 from .forms import ReservationForm
 
 
@@ -45,10 +45,15 @@ def car_detail(request, id):
     return render(request, 'cars/car_detail.html', context)
 
 
-# @require_POST
-# def reserve_car(request):
-#     form = ReservationForm(request.POST)
-#     if form.is_valid():
-#
+@login_required()
+def user_profile(request):
+    cars_reserve = Reservation.objects.filter(customer__user_id=request.user.id)
+
+    context = {
+        'cars_reserve': cars_reserve,
+    }
+
+    return render(request, 'profile.html', context)
+
 
 
