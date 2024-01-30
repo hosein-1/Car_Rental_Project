@@ -4994,12 +4994,12 @@ textarea.form-control-lg {
   padding: 0.375rem 0.75rem;
 }
 
-.page-item:first-child .page-link {
+.page-item:last-child .page-link {
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
 }
 
-.page-item:last-child .page-link {
+.page-item:first-child .page-link {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
 }
