@@ -40,6 +40,11 @@ class Car(models.Model):
 
     def __str__(self):
         return f'{self.name}'
+    
+    def Price(self):
+        if(self.price is not None):
+            return self.price
+        return self.category.price
 
 
 class Driver(models.Model):
