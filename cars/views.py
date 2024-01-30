@@ -5,6 +5,15 @@ from .models import Car, Customer
 from .forms import ReservationForm
 
 
+def home(request):
+    cars = Car.objects.all()[:6]
+    context = {
+        'cars': cars,
+    }
+    return render(request, 'cars/home.html', context)
+
+
+
 def cars_list(request):
     cars = Car.objects.all()
     context = {
