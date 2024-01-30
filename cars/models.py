@@ -1,7 +1,9 @@
 from django.db import models
 from django.conf import settings
 from django_jalali.db import models as jmodels
-from django.utils import timezone
+from datetime import timedelta, datetime
+
+
 
 class Customer(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
@@ -65,8 +67,8 @@ class Reservation(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.PROTECT)
     car = models.ForeignKey(Car, on_delete=models.PROTECT)
     driver = models.ForeignKey(Driver, on_delete=models.PROTECT, blank=True)
-    start_date = jmodels.jDateTimeField(default=timezone.now())
-    end_date = jmodels.jDateTimeField(default=timezone.now() + timezone.timedelta(2))
+    start_date = jmodels.jDateField(default=datetime.today())
+    end_date = jmodels.jDateField(default=datetime.today() + timedelta(days=2))
     delivery_address = models.CharField(max_length=500)
     is_paid = models.CharField(max_length=6, choices=PAYMENT_STATUS, default=UNPAID)
 
