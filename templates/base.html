@@ -9,9 +9,11 @@
 
   <title>{% block title %}{% endblock title %}</title>
 
+
   <link rel="stylesheet" href="{% static 'style/bootstrap.css' %}">
   <link rel="stylesheet" href="{% static 'style/bootstrap-icons.min.css' %}">
   <link rel="stylesheet" href="{% static 'style/main-style.css' %}">
+
 
 </head>
 
@@ -24,6 +26,15 @@
   {% endif %}
 
 
+    {# Note: log out works with post request!!!! #}
+    {% if user.is_authenticated %}
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <input type="submit" value="خروج">
+        </form>
+    {% else %}
+        <a href="{% url 'login' %}">وارد شوید</a>
+    {% endif %}
   {% block body %}
   {% endblock body %}
 
