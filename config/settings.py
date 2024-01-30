@@ -133,7 +133,7 @@ AUTH_USER_MODEL = "accounts.CustomUser"
 
 # Log In and Log out redirect Config
 LOGIN_REDIRECT_URL = 'cars_list'
-LOGOUT_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'cars_list'
 
 # Email config
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
