@@ -31,3 +31,7 @@ def ask_question(request):
 
 def about_us_view(request):
     return render(request, 'pages/about_us.html')
+
+
+def contact_us(request):
+    return render(request, 'pages/contact_us.html')
