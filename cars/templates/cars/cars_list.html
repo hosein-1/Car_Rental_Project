@@ -36,9 +36,8 @@
             </div>
             {% endfor %}
         </div>
-        <div class="row" style="float: left;">
-            <div class=""><a href="{% url 'cars_list' %}" class="btn btn-outline-primary">مشاهده موارد بیشتر...</a>
-            </div>
+        <div class="row">
+            {% include 'pagination.html' %}
         </div>
     </div>
 </div>

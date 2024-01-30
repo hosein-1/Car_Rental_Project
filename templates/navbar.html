@@ -48,6 +48,25 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">ارتباط با ما</a>
                 </li>
+                {% if not request.user.is_authenticated %}
+                <li class="nav-item {% if request.resolver_match.view_name == 'login' %}active{%endif%}"><a
+                        href="{% url 'login' %}" class="nav-link">ورود</a>
+                </li>
+                <li class="nav-item {% if request.resolver_match.view_name == 'signup' %}active{%endif%}"><a
+                        href="{% url 'signup' %}" class="nav-link">ثبت
+                        نام</a></li>
+                {% else %}
+                <li class="nav-item {% if request.resolver_match.view_name == 'profile' %}active{%endif%}"><a
+                        href="{% url 'profile' %}" class="nav-link">پروفایل</a></li>
+                <li  class="nav-item"><a href="{% url 'password_change' %}" class="nav-link mt5">تغییر رمز عبور<a></li>
+                <li  class="nav-item"><a href="{% url 'password_reset' %}" class="nav-link mt5">فراموشی رمز عبور<a></li>
+                <li class="nav-item {% if request.resolver_match.view_name == 'logout' %}active{%endif%}">
+                    <form method="post" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <input type="submit" class="nav-link" value="خروج">
+                    </form>
+                </li>
+                {% endif %}
             </ul>
             <form class="d-flex">
                 <input class="form-control ms-2" type="search" placeholder="جستجو" aria-label="جستجو">
