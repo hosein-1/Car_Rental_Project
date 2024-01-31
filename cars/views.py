@@ -5,7 +5,8 @@ from django.db.models import Q
 from django.contrib import messages
 
 
-from .models import Car, Customer, Reservation
+from itertools import chain
+from .models import Car, Customer, Reservation, Category
 from .forms import ReservationForm
 
 
@@ -107,18 +108,28 @@ def user_profile(request):
 
 
 def search(request):
-    query = request.GET.get('q')
+    categories = Category.objects.all()
+    category_query = request.GET.get('category')
+    search_query = request.GET.get('q')
 
-    if query:
-        object_list = Car.objects.filter(
-            Q(name__icontains=query) | Q(category__name__icontains=query) | Q(model__icontains=query)
+    if search_query:
+        search_list = Car.objects.filter(
+            Q(name__icontains=search_query) | Q(category__name__icontains=search_query) | Q(model__icontains=search_query)
         )
     else:
-        object_list = None
+        search_list = Car.objects.none()
+
+    if category_query:
+        category_list = Car.objects.filter(Q(category_id=category_query))
+
+    else:
+        category_list = Car.objects.none()
 
     context = {
-        'query': query,
-        'object_list': object_list,
+        'query': search_query,
+        'object_list': (search_list | category_list).distinct(),
         'banner': False,
+        'categories': categories,
     }
+
     return render(request, 'cars/search_list.html', context)
