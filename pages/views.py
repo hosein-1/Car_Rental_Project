@@ -2,23 +2,17 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 
 
-from .models import Questions , Page
+from .models import Questions, Page
 from .forms import QuestionForm
 
-# Create your views here.
-def page(request, slug):
-    page = get_object_or_404(Page, slug=slug)
 
-    if(not page.is_active):
-        #not find
-        
-        b = 0
+def page(request, slug):
+    page_object = get_object_or_404(Page.objects.filter(is_active=True), slug=slug)
 
     context = {
-        'page': page,
+        'page': page_object,
     }
     return render(request, 'pages/page.html', context)
-
 
 
 @login_required()
