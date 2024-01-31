@@ -42,9 +42,10 @@ class Car(models.Model):
 
     def __str__(self):
         return f'{self.name}'
-    
-    def Price(self):
-        if(self.price is not None):
+
+    @property
+    def car_price(self):
+        if self.price is not None:
             return self.price
         return self.category.price
 
@@ -53,7 +54,6 @@ class Driver(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     work_experience = models.CharField(max_length=255)
     certificate_base = models.CharField(max_length=255)
-
 
     class Meta:
         verbose_name = 'راننده'
