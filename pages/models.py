@@ -21,6 +21,10 @@ class Questions(models.Model):
     body = models.TextField()
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
+    class Meta:
+        verbose_name = 'سوالات'
+        verbose_name_plural = 'سوالات'
+
     @property
     def children(self):
         return Questions.objects.filter(parent=self).reverse()

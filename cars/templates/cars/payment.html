@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}پرداخت{% endblock title %}
+
+
+{% block body %}
+    <h1>برای نهایی کردن رزرو خود، خرید خود را تکمیل کنید.</h1>
+    <h6></h6>
+    <form action="" method="post">
+        {% csrf_token %}
+        <span>مبلغ قابل پرداخت:{{ total_price }}</span>
+        <input type="submit" value="پرداخت">
+    </form>
+
+{% endblock body %}

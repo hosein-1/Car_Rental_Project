@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
+from django.contrib import messages
 
 
 from .models import Car, Customer, Reservation
@@ -53,15 +54,19 @@ def car_reserv(request, id):
     car = get_object_or_404(Car, id=id)
 
     if request.method == 'POST':
-        customer = Customer.objects.get(user=request.user)
+        try:
+            customer = Customer.objects.get(user=request.user)
+        except:
+            messages.warning(request, 'لطفا با سطح دسترسی کاربر معمولی وارد شوید.')
+            return render(request, 'cars/home.html')
+
         form = ReservationForm(request.POST)
         if form.is_valid():
             reserve_object = form.save(commit=False)
             reserve_object.customer = customer
             reserve_object.car = car
-            reserve_object.is_paid = 'p'
             form.save()
-            return redirect('profile')
+            return redirect('payment')
     else:
         form = ReservationForm()
 
@@ -71,6 +76,22 @@ def car_reserv(request, id):
         'banner': False
     }
     return render(request, 'cars/car_reserv.html', context)
+
+
+@login_required()
+def payment(request):
+    reserve_object = Reservation.objects.filter(customer__user_id=request.user.id).filter(is_paid='up').first()
+    total_price = (reserve_object.end_date.day - reserve_object.start_date.day) * reserve_object.car.car_price
+
+    if request.method == 'POST':
+        reserve_object.is_paid = 'p'
+        return redirect('profile')
+
+    context = {
+        'reserve_object': reserve_object,
+        'total_price': total_price,
+    }
+    return render(request, 'cars/payment.html', context)
 
 
 @login_required()
