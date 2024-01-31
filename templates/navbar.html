@@ -68,8 +68,8 @@
                 </li>
                 {% endif %}
             </ul>
-            <form class="d-flex">
-                <input class="form-control ms-2" type="search" placeholder="جستجو" aria-label="جستجو">
+            <form class="d-flex" action="{% url 'search_cars' %}">
+                <input class="form-control ms-2" name="q" type="search" placeholder="جستجو" aria-label="جستجو">
                 <button class="btn btn-primary text-nowrap" type="submit">پیدا کن</button>
             </form>
         </div>
