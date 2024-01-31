@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
+from django.contrib import messages
 
 
 from .models import Car, Customer, Reservation
@@ -41,7 +42,12 @@ def car_detail(request, id):
     car = get_object_or_404(Car, id=id)
 
     if request.method == 'POST':
-        customer = Customer.objects.get(user=request.user)
+        try:
+            customer = Customer.objects.get(user=request.user)
+        except:
+            messages.warning(request, 'لطفا با سطح دسترسی کاربر معمولی وارد شوید.')
+            return render(request, 'cars/home.html')
+
         form = ReservationForm(request.POST)
         if form.is_valid():
             reserve_object = form.save(commit=False)
