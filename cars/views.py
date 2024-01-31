@@ -53,9 +53,8 @@ def car_detail(request, id):
             reserve_object = form.save(commit=False)
             reserve_object.customer = customer
             reserve_object.car = car
-            reserve_object.is_paid = 'p'
             form.save()
-            return redirect('cars_list')
+            return redirect('payment')
     else:
         form = ReservationForm()
 
@@ -64,6 +63,22 @@ def car_detail(request, id):
         'form': form,
     }
     return render(request, 'cars/car_detail.html', context)
+
+
+@login_required()
+def payment(request):
+    reserve_object = Reservation.objects.filter(customer__user_id=request.user.id).filter(is_paid='up').first()
+    total_price = (reserve_object.end_date.day - reserve_object.start_date.day) * reserve_object.car.car_price
+
+    if request.method == 'POST':
+        reserve_object.is_paid = 'p'
+        return redirect('profile')
+
+    context = {
+        'reserve_object': reserve_object,
+        'total_price': total_price,
+    }
+    return render(request, 'cars/payment.html', context)
 
 
 @login_required()
