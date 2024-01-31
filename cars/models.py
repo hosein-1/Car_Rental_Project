@@ -53,7 +53,7 @@ class Driver(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     work_experience = models.CharField(max_length=255)
     certificate_base = models.CharField(max_length=255)
-    is_employed = models.BooleanField(default=False)
+
 
     class Meta:
         verbose_name = 'راننده'
