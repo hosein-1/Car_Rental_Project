@@ -4,21 +4,66 @@
 
 
 {% block body %}
-    {% for car_reserve in cars_reserve %}
-        {% if car_reserve.driver %}
-            {{ car_reserve.driver }}
-         {% else %}
-            <span>بدون راننده</span>
-        {% endif %}
-        {{ user.username }}
-        {{ car_reserve.car.name }}
-        {{ car_reserve.delivery_address }}
-    {% endfor %}
-<h5>اطلاعات کاربری</h5>
-    username:<div>{{ user.username }}</div>
-    first_name: <div>{{ user.first_name }}</div>
-    last_name: <div>{{ user.last_name }}</div>
-    age: <div>{{ user.age }}</div>
-<h5>تغییر پسورد</h5>
-    <a href="{% url 'password_change' %}">تغییر پسورد</a>
+<div class="div-mid">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-10 row mx-auto">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">نام ماشین</th>
+                            <th scope="col">تاریخ رزرو</th>
+                            <th scope="col">تاریخ پایان</th>
+                            <th scope="col">ادرس محل تحویل</th>
+                            <th scope="col">راننده</th>
+                            <th scope="col">پرداخت شده</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for car_reserve in cars_reserve %}
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>{{ car_reserve.car.name }}</td>
+                            <td>{{ car_reserve.start_date }}</td>
+                            <td>{{ car_reserve.end_date }}</td>
+                            <td>{{ car_reserve.delivery_address }}</td>
+                            <td>
+                                {% if car_reserve.driver %}
+                                {{ car_reserve.driver }}
+                                {% else %}
+                                <span>بدون راننده</span>
+                                {% endif %}
+                            </td>
+                            <td>{{ car_reserve.is_paid }}</td>
+                        </tr>
+                        
+                        
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="div-mid">
+    <div class="container my-5">
+        <div class="row big-card">
+            <div class="col-6 row mx-auto">
+                <div class="col-3 big-card-right"></div>
+                <div class="col-9 big-card-left">
+                    <h4 class="mb-3">اطلاعات کاربری</h4>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item">نام کاربری: <span>{{ user.username }}</span></li>
+                        <li class="list-group-item">اسم کوچک: <span>{{ user.first_name }}</span></li>
+                        <li class="list-group-item">نام خانوادگی: <span>{{ user.last_name }}</span></li>
+                        <li class="list-group-item">سن: <span>{{ user.age }}</span></li>
+                    </ul>
+                    <a class="btn btn-primary" href="{% url 'password_change' %}">تغییر پسورد</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock body %}
