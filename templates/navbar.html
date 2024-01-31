@@ -1,7 +1,7 @@
 {% load static %}
 <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href="{% url 'home' %}">Logo</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
             aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -9,24 +9,10 @@
         <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">خانه</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">خانه</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">رزرو ماشین</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        ماشین ها
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                    <a class="nav-link" href="{% url 'cars_list' %}">رزرو ماشین</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
@@ -43,28 +29,45 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">درباره ما</a>
+                    <a class="nav-link" href="{% url 'page' 'aboutus' %}">درباره ما</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">ارتباط با ما</a>
+                    <a class="nav-link" href="{% url 'page' 'contactus' %}">ارتباط با ما</a>
                 </li>
+            
                 {% if not request.user.is_authenticated %}
-                <li class="nav-item {% if request.resolver_match.view_name == 'login' %}active{%endif%}"><a
-                        href="{% url 'login' %}" class="nav-link">ورود</a>
+                <li class="nav-item {% if request.resolver_match.view_name == 'login' %}active{%endif%}">
+                    <a href="{% url 'login' %}" class="nav-link">ورود</a>
                 </li>
-                <li class="nav-item {% if request.resolver_match.view_name == 'signup' %}active{%endif%}"><a
-                        href="{% url 'signup' %}" class="nav-link">ثبت
-                        نام</a></li>
+                <li class="nav-item {% if request.resolver_match.view_name == 'signup' %}active{%endif%}">
+                    <a href="{% url 'signup' %}" class="nav-link">ثبت نام</a>
+                </li>
                 {% else %}
-                <li class="nav-item {% if request.resolver_match.view_name == 'profile' %}active{%endif%}"><a
-                        href="{% url 'profile' %}" class="nav-link">پروفایل</a></li>
-                <li  class="nav-item"><a href="{% url 'password_change' %}" class="nav-link mt5">تغییر رمز عبور<a></li>
-                <li  class="nav-item"><a href="{% url 'password_reset' %}" class="nav-link mt5">فراموشی رمز عبور<a></li>
-                <li class="nav-item {% if request.resolver_match.view_name == 'logout' %}active{%endif%}">
-                    <form method="post" action="{% url 'logout' %}">
-                        {% csrf_token %}
-                        <input type="submit" class="nav-link" value="خروج">
-                    </form>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdownUser" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        کاربری
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarScrollingDropdownUser">
+
+                        <li class=" {% if request.resolver_match.view_name == 'profile' %}active{%endif%}">
+                            <a href="{% url 'profile' %}" class="dropdown-item">پروفایل</a>
+                        </li>
+                        <li class="">
+                            <a href="{% url 'password_change' %}" class="dropdown-item">تغییر رمز عبور</a>
+                        </li>
+                        <li class="">
+                            <a href="{% url 'password_reset' %}" class="dropdown-item">فراموشی رمز عبور</a>
+                        </li>
+                        <li class=" {% if request.resolver_match.view_name == 'logout' %}active{%endif%}">
+                            <form method="post" action="{% url 'logout' %}" style="">
+                                {% csrf_token %}
+                                <input style="background: #00000000;border: none;" type="submit" class="dropdown-item"
+                                    value="خروج">
+                            </form>
+                        </li>
+                    </ul>
                 </li>
                 {% endif %}
             </ul>
