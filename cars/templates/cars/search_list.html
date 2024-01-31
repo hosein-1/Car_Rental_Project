@@ -9,14 +9,19 @@
     <div class="container my-5">
         <div class="row">
             <h1 class="col-3">جستجو</h1>
-            <div class="col-4">
+            <div class="col-9">
                 <form class="d-flex" action="{% url 'search_cars' %}" style="width: 100%;">
                     <input class="form-control ms-2" name="q" type="search" placeholder="جستجو" aria-label="جستجو"
                         value="{% if query %}{{ query }}{% endif %}">
+                    <select class="col-3 ms-2" name="category" id="categoryselected">
+                        <option value="-1">دسته بندی</option>
+                        {% for category in categorys %}
+                        <option value="{{ category.id }}">{{ category.name }}</option>
+                        {% endfor %}
+                    </select>
                     <button class="btn btn-primary text-nowrap" type="submit">پیدا کن</button>
                 </form>
             </div>
-            <div class="col-3"></div>
         </div>
         <div class="card-body">
             {% if object_list %}
