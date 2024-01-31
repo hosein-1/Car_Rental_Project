@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Log In{% endblock title %}
+{% block title %}ورود به سیستم{% endblock title %}
 
 {% block block_header %}
 {% with banner=False %}
@@ -19,7 +19,9 @@
                     <form action="" method="post">
                         {% csrf_token %}
                         {{ form.as_p }}
-                        <input type="submit" value="Log In">
+                        <input class="btn btn-success" type="submit" value="ورود">
+                        <a href="{% url 'signup' %}" class="btn btn-primary">ثبت نام</a>
+                        <a href="{% url 'password_reset' %}" class="btn btn-primary">فراموشی رمز عبور</a>
                     </form>
                 </div>
             </div>
