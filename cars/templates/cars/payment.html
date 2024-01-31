@@ -4,12 +4,24 @@
 
 
 {% block body %}
-    <h1>برای نهایی کردن رزرو خود، خرید خود را تکمیل کنید.</h1>
-    <h6></h6>
-    <form action="" method="post">
-        {% csrf_token %}
-        <span>مبلغ قابل پرداخت:{{ total_price }}</span>
-        <input type="submit" value="پرداخت">
-    </form>
+<div class="div-mid">
+    <div class="container my-5">
+        <div class="row big-card">
+            <div class="col-6 row mx-auto">
+                <div class="col-3 big-card-right"></div>
+                <div class="col-9 big-card-left">
+                    <h4 class="mb-5">پرداخت</h4>
+                    <p>برای نهایی کردن رزرو خود، خرید خود را تکمیل کنید.</p>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <p>مبلغ قابل پرداخت:{{ total_price }}</p>
+                        <input class="btn btn-primary" type="submit" value="پرداخت">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 {% endblock body %}
