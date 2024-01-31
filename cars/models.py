@@ -33,7 +33,7 @@ class Car(models.Model):
     model = models.CharField(max_length=500)
     number_plate = models.CharField(max_length=255)
     color = models.CharField(max_length=255)
-    car_image = models.ImageField(upload_to='cars/cars_image/', default='cars/cars_image/default.jpg')
+    car_image = models.ImageField(upload_to='cars/cars_image/', default='cars/cars_image/default.png')
     price = models.PositiveIntegerField(blank=True, null=True)
 
     class Meta:

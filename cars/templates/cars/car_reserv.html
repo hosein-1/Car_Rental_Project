@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Car Detail{% endblock title %}
+
+
+{% block body %}
+<div class="div-mid">
+    <div class="container my-5">
+        <div class="row big-card">
+            <div class="col-10 row mx-auto">
+                <div class="col-5 big-card-right">
+                    <h4 class="mb-3">{{ car.name }}</h4>
+                    <h5 class="mb-3">قیمت روزانه {{ car.Price }} میلیون تومان</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">مدل: {{ car.model }}</li>
+                        <li class="list-group-item">رنگ: {{ car.color }}</li>
+                        <li class="list-group-item">شماره پلاک: {{ car.number_plate }}</li>
+                        <li class="list-group-item">دسته بندی: {{ car.category.name }}</li>
+                    </ul>
+                </div>
+                <div class="col-7 big-card-left">
+                    {% if user.is_authenticated %}
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="submit" value="رزرو">
+                    </form>
+                    {% else %}
+                    <p>برای رزرو ماشین ابتدا وارد شوید.</p>
+                    <a class="btn btn-primary" href="{% url 'login' %}">ورود</a>
+                    <a class="btn btn-primary" href="{% url 'signup' %}">ثبت نام</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock body %}

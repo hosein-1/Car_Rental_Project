@@ -1,27 +1,42 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Car Detail{% endblock title %}
 
 
 {% block body %}
+<div class="div-mid">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-10 row mx-auto">
+                <div class="col-6 ps-4">
+                    <img src="{% if car.car_image %}{{ car.car_image.url }}{% else %}{% static 'img/car-default.png' %}{% endif %}"
+                        alt="" style="width: 100%;">
+                </div>
+                <div class="col-6 pe-4">
+                    <h4 class="mb-3">{{ car.name }}</h4>
+                    <h5 class="mb-3" style="color:#d91159;">قیمت روزانه {{ car.Price }} میلیون تومان</h5>
+                    <ul>
+                        <li>مدل: {{ car.model }}</li>
+                        <li>رنگ: {{ car.color }}</li>
+                        <li>شماره پلاک: {{ car.number_plate }}</li>
+                        <li>دسته بندی: {{ car.category.name }}</li>
+                    </ul>
+                    {% if user.is_authenticated %}
+                    <a class="btn btn-primary" href="{% url 'car_reserv' car.id %}">رزرو ماشین</a>
 
-        {{ car.number_plate }}
-        {{ car.name }}
-        {{ car.model }}
-        {{ car.color }}
+                    {% else %}
+                    <p>برای رزرو ماشین ابتدا وارد شوید.</p>
+                    <a class="btn btn-primary" href="{% url 'login' %}">ورود</a>
+                    <a class="btn btn-primary" href="{% url 'signup' %}">ثبت نام</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-        {% if user.is_authenticated %}
-            <form action="" method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <input type="submit" value="رزرو">
-            </form>
 
-        {% else %}
-            <p>برای رزرو ماشین ابتدا وارد شوید.</p>
-            <a href="{% url 'login' %}">ورود</a>
-            <a href="{% url 'signup' %}">ثبت نام</a>
-        {% endif %}
 
 
 

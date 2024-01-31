@@ -40,6 +40,18 @@ def cars_list(request):
 def car_detail(request, id):
     car = get_object_or_404(Car, id=id)
 
+    context = {
+        'car': car,
+        'banner': False
+    }
+    return render(request, 'cars/car_detail.html', context)
+
+
+
+@login_required()
+def car_reserv(request, id):
+    car = get_object_or_404(Car, id=id)
+
     if request.method == 'POST':
         customer = Customer.objects.get(user=request.user)
         form = ReservationForm(request.POST)
@@ -49,15 +61,16 @@ def car_detail(request, id):
             reserve_object.car = car
             reserve_object.is_paid = 'p'
             form.save()
-            return redirect('cars_list')
+            return redirect('profile')
     else:
         form = ReservationForm()
 
     context = {
         'car': car,
         'form': form,
+        'banner': False
     }
-    return render(request, 'cars/car_detail.html', context)
+    return render(request, 'cars/car_reserv.html', context)
 
 
 @login_required()
@@ -66,6 +79,7 @@ def user_profile(request):
 
     context = {
         'cars_reserve': cars_reserve,
+        'banner': False
     }
 
     return render(request, 'profile.html', context)
