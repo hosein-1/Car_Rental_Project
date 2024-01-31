@@ -12,7 +12,7 @@
             <div class="card-car">
 
                 <div class="col-12">
-                    <img src="./img/kia-cerato-.png" alt="">
+                    <img src="{% if car.car_image %}{{ car.car_image.url }}{% else %}{% static 'img/car-default.png' %}{% endif %}" alt="">
                 </div>
                 <div class="col-12">
                     <h5>{{ car.name }}</h5>
