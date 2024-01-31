@@ -14,19 +14,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'cars_list' %}">رزرو ماشین</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        دسته بندی
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'search_cars' %}">دسته بندی</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'page' 'aboutus' %}">درباره ما</a>
@@ -34,7 +23,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'page' 'contactus' %}">ارتباط با ما</a>
                 </li>
-            
+
                 {% if not request.user.is_authenticated %}
                 <li class="nav-item {% if request.resolver_match.view_name == 'login' %}active{%endif%}">
                     <a href="{% url 'login' %}" class="nav-link">ورود</a>
@@ -72,7 +61,8 @@
                 {% endif %}
             </ul>
             <form class="d-flex" action="{% url 'search_cars' %}">
-                <input class="form-control ms-2" name="q" type="search" placeholder="جستجو" aria-label="جستجو">
+                <input class="form-control ms-2" name="q" type="search" placeholder="جستجو" aria-label="جستجو"
+                    value="{% if query %}{{ query }}{% endif %}">
                 <button class="btn btn-primary text-nowrap" type="submit">پیدا کن</button>
             </form>
         </div>

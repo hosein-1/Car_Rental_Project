@@ -1,15 +1,61 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Car Detail{% endblock title %}
 
 
 {% block body %}
-    {% if object_list %}
-    {% for car in object_list %}
-        <a href="{% url 'car_detail' car.id %}">{{ car.name }}</a>
-    {% endfor %}
-    {% else %}
-        <p>نتیجه ای یافت نشد.</p>
-    {% endif %}
+<div class="div-mid my-5">
+    <div class="container my-5">
+        <div class="row">
+            <h1 class="col-3">جستجو</h1>
+            <div class="col-4">
+                <form class="d-flex" action="{% url 'search_cars' %}" style="width: 100%;">
+                    <input class="form-control ms-2" name="q" type="search" placeholder="جستجو" aria-label="جستجو"
+                        value="{% if query %}{{ query }}{% endif %}">
+                    <button class="btn btn-primary text-nowrap" type="submit">پیدا کن</button>
+                </form>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="card-body">
+            {% if object_list %}
+            {% for car in object_list %}
+            <div class="card-car">
+
+                <div class="col-12">
+                    <img src="{% if car.car_image %}{{ car.car_image.url }}{% else %}{% static 'img/car-default.png' %}{% endif %}"
+                        alt="">
+                </div>
+                <div class="col-12">
+                    <h5>{{ car.name }}</h5>
+                    <p><i class="bi bi-asterisk"></i>{{ car.model }}</p>
+                    <p><i class="bi bi-tags-fill"></i>{{ car.category.name }}</p>
+                    <div class="card-price">
+                        {{ car.car_price }}<br>
+                        <span>
+                            میلیون تومان<br>
+                            روزانه
+                        </span>
+                    </div>
+                    <div class="card-button">
+                        <div class="card-border"></div>
+                        <a href="{% url 'car_detail' car.id %}" class="btn-primary">رزرو ماشین</a>
+                        <div class="card-border"></div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <p>نتیجه ای یافت نشد.</p>
+            {% endif %}
+        </div>
+        <div class="row">
+            {% if object_list %}
+            {% include 'pagination.html' %}
+            {% endif %}
+        </div>
+    </div>
+</div>
 
 {% endblock body %}

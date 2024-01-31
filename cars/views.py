@@ -117,6 +117,8 @@ def search(request):
         object_list = None
 
     context = {
+        'query': query,
         'object_list': object_list,
+        'banner': False,
     }
     return render(request, 'cars/search_list.html', context)
