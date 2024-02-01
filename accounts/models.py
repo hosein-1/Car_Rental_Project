@@ -11,10 +11,13 @@ class CustomUser(AbstractUser):
         (DRIVER, 'driver'),
         (ADMIN, 'admin')
     ]
-    national_code = models.CharField(max_length=20)
-    phone_number = models.CharField(max_length=20)
+    email = models.EmailField(verbose_name='آدرس ایمیل', unique=True)
+    first_name = models.CharField(verbose_name='نام', max_length=255)
+    last_name = models.CharField(verbose_name='نام خانوادگی', max_length=255)
+    national_code = models.CharField(verbose_name='کد ملی', max_length=20)
+    phone_number = models.CharField(verbose_name='شماره تلفن', max_length=20)
     address = models.CharField(max_length=500)
-    age = models.PositiveIntegerField(blank=True, null=True)
-    user_type = models.CharField(max_length=1, choices=USER_STATUS, default=CUSTOMER)
+    age = models.PositiveIntegerField(verbose_name='سن', blank=True, null=True)
+
 
 

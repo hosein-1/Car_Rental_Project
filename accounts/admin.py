@@ -6,13 +6,13 @@ from .models import CustomUser
 
 @admin.register(CustomUser)
 class CustomUserAdmin(UserAdmin):
-    list_display = ['id', 'first_name', 'last_name', 'user_type']
+    list_display = ['id', 'first_name', 'last_name']
 
     fieldsets = UserAdmin.fieldsets + (
-        (None, {'fields': ('age', 'user_type', 'phone_number', 'address', 'national_code')}),
+        (None, {'fields': ('age', 'phone_number', 'address', 'national_code')}),
     )
     add_fieldsets = UserAdmin.add_fieldsets + (
-        (None, {'fields': ('age', 'user_type', 'phone_number', 'address', 'national_code')}),
+        (None, {'fields': ('age', 'phone_number', 'address', 'national_code')}),
     )
 
 
