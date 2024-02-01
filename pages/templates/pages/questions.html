@@ -16,11 +16,14 @@
     {% else %}
     <p>برای ارسال دیدگاه لازم است وارد شده یا ثبت‌نام کنید </p>
 {% endif %}
+
 {% for question in questions %}
 
+
             {% if question.is_parent %}
+
          <h3> <b>{{ question.author }} : </b> {{ question.body }}</h3>
-               {% if user.is_authenticated %}
+                {% if user.id == question.author_id or user.is_superuser %}
          &nbsp; &nbsp; &nbsp;<form action="" method="POST">
                 {% csrf_token %}
             <div>
@@ -31,10 +34,13 @@
             </div>
          </form>
             {% endif %}
-         {% endif %}
+                {% endif %}
+
+
          {% for replies in question.children %}
              <h3>&nbsp; &nbsp; &nbsp; <b>{{ replies.author }} : </b> {{ replies.body }}</h3>
          {% endfor %}
+
 
       {% endfor %}
 {% endblock body %}

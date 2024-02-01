@@ -23,6 +23,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'page' 'contactus' %}">ارتباط با ما</a>
                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="{% url 'ask_question'%}">سوالات متداول</a>
+                </li>
 
                 {% if not request.user.is_authenticated %}
                 <li class="nav-item {% if request.resolver_match.view_name == 'login' %}active{%endif%}">

@@ -15,7 +15,7 @@ def page(request, slug):
     return render(request, 'pages/page.html', context)
 
 
-@login_required()
+
 def ask_question(request):
     questions = Questions.objects.all()
 
