@@ -4,20 +4,8 @@ from django_jalali.db import models as jmodels
 from datetime import timedelta, datetime
 
 
-class Customer(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-
-    class Meta:
-        verbose_name = 'مشتری'
-        verbose_name_plural = 'مشتری'
-
-    def __str__(self):
-        return f'{self.user.first_name} {self.user.last_name}'
-
-
 class Category(models.Model):
     name = models.CharField(max_length=255)
-    price = models.PositiveIntegerField()
 
     class Meta:
         verbose_name = 'دسته بندی'
@@ -34,7 +22,7 @@ class Car(models.Model):
     number_plate = models.CharField(max_length=255)
     color = models.CharField(max_length=255)
     car_image = models.ImageField(upload_to='cars/cars_image/', default='cars/cars_image/default.png')
-    price = models.PositiveIntegerField(blank=True, null=True)
+    price = models.PositiveIntegerField()
 
     class Meta:
         verbose_name = 'ماشین'
@@ -43,36 +31,26 @@ class Car(models.Model):
     def __str__(self):
         return f'{self.name}'
 
-    @property
-    def car_price(self):
-        if self.price is not None:
-            return self.price
-        return self.category.price
-
-
-class Driver(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    work_experience = models.CharField(max_length=255)
-    certificate_base = models.CharField(max_length=255)
-
-    class Meta:
-        verbose_name = 'راننده'
-        verbose_name_plural = 'راننده'
-
-    def __str__(self):
-        return f'{self.user.first_name} {self.user.last_name}'
-
 
 class Reservation(models.Model):
     PAID = 'p'
     UNPAID = 'up'
     PAYMENT_STATUS = [
-        (PAID, 'paid'),
-        (UNPAID, 'unpaid')
+        (PAID, 'پرداخت شده'),
+        (UNPAID, 'پرداخت نشده')
     ]
-    customer = models.ForeignKey(Customer, on_delete=models.PROTECT)
+
+    WITH_DRIVER = 'wd'
+    WITHOUT_DRIVER = 'wod'
+
+    DRIVER_STATUS = [
+        (WITH_DRIVER, 'با راننده'),
+        (WITHOUT_DRIVER, 'بدون راننده'),
+    ]
+
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
     car = models.ForeignKey(Car, on_delete=models.PROTECT)
-    driver = models.ForeignKey(Driver, on_delete=models.PROTECT, blank=True, null=True)
+    driver = models.CharField(max_length=3, choices=DRIVER_STATUS, default=WITH_DRIVER)
     start_date = jmodels.jDateField(default=datetime.today())
     end_date = jmodels.jDateField(default=datetime.today() + timedelta(days=2))
     delivery_address = models.CharField(max_length=500)
@@ -83,4 +61,4 @@ class Reservation(models.Model):
         verbose_name_plural = 'رزرو'
 
     def __str__(self):
-        return f'{self.customer} : {self.car}'
+        return f'{self.user} : {self.car}'

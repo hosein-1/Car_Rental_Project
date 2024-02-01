@@ -2,11 +2,10 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
-from django.contrib import messages
+from django.views.decorators.http import require_POST
 
 
-from itertools import chain
-from .models import Car, Customer, Reservation, Category
+from .models import Car, Reservation, Category
 from .forms import ReservationForm
 
 
@@ -49,22 +48,15 @@ def car_detail(request, id):
     return render(request, 'cars/car_detail.html', context)
 
 
-
 @login_required()
-def car_reserv(request, id):
+def car_reserve(request, id):
     car = get_object_or_404(Car, id=id)
 
     if request.method == 'POST':
-        try:
-            customer = Customer.objects.get(user=request.user)
-        except:
-            messages.warning(request, 'لطفا با سطح دسترسی کاربر معمولی وارد شوید.')
-            return render(request, 'cars/home.html')
-
         form = ReservationForm(request.POST)
         if form.is_valid():
             reserve_object = form.save(commit=False)
-            reserve_object.customer = customer
+            reserve_object.user = request.user
             reserve_object.car = car
             form.save()
             return redirect('payment')
@@ -76,16 +68,21 @@ def car_reserv(request, id):
         'form': form,
         'banner': False
     }
-    return render(request, 'cars/car_reserv.html', context)
+    return render(request, 'cars/car_reserve.html', context)
 
 
 @login_required()
 def payment(request):
-    reserve_object = Reservation.objects.filter(customer__user_id=request.user.id).filter(is_paid='up').first()
-    total_price = (reserve_object.end_date.day - reserve_object.start_date.day) * reserve_object.car.car_price
+    reserve_object = Reservation.objects.filter(user_id=request.user.id).filter(is_paid='up').first()
+    if reserve_object:
+        total_price = (reserve_object.end_date.day - reserve_object.start_date.day) * reserve_object.car.price
+
+    else:
+        total_price = 0
 
     if request.method == 'POST':
         reserve_object.is_paid = 'p'
+        reserve_object.save()
         return redirect('profile')
 
     context = {
@@ -97,7 +94,7 @@ def payment(request):
 
 @login_required()
 def user_profile(request):
-    cars_reserve = Reservation.objects.filter(customer__user_id=request.user.id)
+    cars_reserve = Reservation.objects.filter(user_id=request.user.id)
 
     context = {
         'cars_reserve': cars_reserve,
@@ -108,8 +105,6 @@ def user_profile(request):
 
 
 def search(request):
-    categories = Category.objects.all()
-    category_query = request.GET.get('category')
     search_query = request.GET.get('q')
 
     if search_query:
@@ -119,17 +114,54 @@ def search(request):
     else:
         search_list = Car.objects.none()
 
-    if category_query:
-        category_list = Car.objects.filter(Q(category_id=category_query))
-
-    else:
-        category_list = Car.objects.none()
+    paginator = Paginator(search_list, 1)
+    page_number = request.GET.get('page', 1)
+    try:
+        object_list = paginator.page(page_number)
+    except EmptyPage:
+        object_list = paginator.page(paginator.num_pages)
+    except PageNotAnInteger:
+        object_list = paginator.page(1)
 
     context = {
         'query': search_query,
-        'object_list': (search_list | category_list).distinct(),
+        'object_list': object_list,
+        'pages': object_list,
         'banner': False,
+        'last_page': max(object_list.paginator.page_range),
+        'pagens': range(object_list.number - 4, object_list.number + 5),
+
+    }
+
+    return render(request, 'cars/search_list.html', context)
+
+
+def filter_cars(request):
+    categories = Category.objects.all()
+    category_query = request.GET.get('category')
+
+    if category_query:
+        category_list = Car.objects.filter(category_id=category_query)
+    else:
+        category_list = Car.objects.none()
+
+    paginator = Paginator(category_list, 1)
+    page_number = request.GET.get('page', 1)
+    try:
+        object_list = paginator.page(page_number)
+    except EmptyPage:
+        object_list = paginator.page(paginator.num_pages)
+    except PageNotAnInteger:
+        object_list = paginator.page(1)
+
+    context = {
         'categories': categories,
+        'object_list': object_list,
+        'pages': object_list,
+        'banner': False,
+        'last_page': max(object_list.paginator.page_range),
+        'pagens': range(object_list.number - 4, object_list.number + 5),
+
     }
 
     return render(request, 'cars/search_list.html', context)

@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-6 pe-4">
                     <h4 class="mb-3">{{ car.name }}</h4>
-                    <h5 class="mb-3" style="color:#d91159;">قیمت روزانه {{ car.car_price }} میلیون تومان</h5>
+                    <h5 class="mb-3" style="color:#d91159;">قیمت روزانه {{ car.price }} میلیون تومان</h5>
                     <ul>
                         <li>مدل: {{ car.model }}</li>
                         <li>رنگ: {{ car.color }}</li>
@@ -23,7 +23,7 @@
                         <li>دسته بندی: {{ car.category.name }}</li>
                     </ul>
                     {% if user.is_authenticated %}
-                    <a class="btn btn-primary" href="{% url 'car_reserv' car.id %}">رزرو ماشین</a>
+                    <a class="btn btn-primary" href="{% url 'car_reserve' car.id %}">رزرو ماشین</a>
 
                     {% else %}
                     <p>برای رزرو ماشین ابتدا وارد شوید.</p>

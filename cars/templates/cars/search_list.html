@@ -13,13 +13,16 @@
                 <form class="d-flex" action="{% url 'search_cars' %}" style="width: 100%;">
                     <input class="form-control ms-2" name="q" type="search" placeholder="جستجو" aria-label="جستجو"
                         value="{% if query %}{{ query }}{% endif %}">
+                    <button class="btn btn-primary text-nowrap" type="submit">پیدا کن</button>
+                </form>
+                <form action="{% url 'filter_cars' %}">
                     <select class="col-3 ms-2" name="category" id="categoryselected">
                         <option value="-1">دسته بندی</option>
                         {% for category in categories %}
                         <option value="{{ category.id }}">{{ category.name }}</option>
                         {% endfor %}
+                        <input type="submit" value="اعمال فیلتر">
                     </select>
-                    <button class="btn btn-primary text-nowrap" type="submit">پیدا کن</button>
                 </form>
             </div>
         </div>
@@ -51,12 +54,13 @@
                 </div>
             </div>
             {% endfor %}
-
+            {% else %}
+                <p>نتیجه ای یافت نشد!</p>
                {% endif %}
         </div>
         <div class="row">
             {% if object_list %}
-            {% include 'pagination.html' %}
+            {% include 'pagination.html' with page=pages pagens=pagens last_page=last_page%}
             {% endif %}
         </div>
     </div>

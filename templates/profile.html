@@ -29,13 +29,10 @@
                             <td>{{ car_reserve.end_date }}</td>
                             <td>{{ car_reserve.delivery_address }}</td>
                             <td>
-                                {% if car_reserve.driver %}
-                                {{ car_reserve.driver }}
-                                {% else %}
-                                <span>بدون راننده</span>
-                                {% endif %}
+                                {{ car_reserve.get_driver_display }}
+
                             </td>
-                            <td>{{ car_reserve.is_paid }}</td>
+                            <td>{{ car_reserve.get_is_paid_display }}</td>
                         </tr>
                         
                         
