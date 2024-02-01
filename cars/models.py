@@ -50,10 +50,10 @@ class Reservation(models.Model):
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
     car = models.ForeignKey(Car, on_delete=models.PROTECT)
-    driver = models.CharField(max_length=3, choices=DRIVER_STATUS, default=WITH_DRIVER)
-    start_date = jmodels.jDateField(default=datetime.today())
-    end_date = jmodels.jDateField(default=datetime.today() + timedelta(days=2))
-    delivery_address = models.CharField(max_length=500)
+    driver = models.CharField(verbose_name='راننده', max_length=3, choices=DRIVER_STATUS, default=WITH_DRIVER)
+    start_date = jmodels.jDateField(verbose_name='تاریخ شروع', default=datetime.today())
+    end_date = jmodels.jDateField(verbose_name='تاریخ پایان', default=datetime.today() + timedelta(days=2))
+    delivery_address = models.CharField(verbose_name='آدرس محل تحویل', max_length=500)
     is_paid = models.CharField(max_length=6, choices=PAYMENT_STATUS, default=UNPAID)
 
     class Meta:
