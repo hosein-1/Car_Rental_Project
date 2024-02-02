@@ -6,4 +6,4 @@ from .models import Questions
 class QuestionForm(forms.ModelForm):
     class Meta:
         model = Questions
-        fields = ['body', 'parent', ]
+        fields = ['title' ,'body', 'parent', ]

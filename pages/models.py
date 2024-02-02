@@ -18,6 +18,7 @@ class Page(models.Model):
 
 class Questions(models.Model):
     parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE, related_name='replies')
+    title = models.CharField(max_length=255, null=True, blank=True)
     body = models.TextField()
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
