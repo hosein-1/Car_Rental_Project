@@ -107,6 +107,9 @@ def user_profile(request):
 def search(request):
     search_query = request.GET.get('q')
     category_query = request.GET.get('category')
+
+    if not category_query:
+        category_query = -1
     
     search_list = Car.objects.all()
 

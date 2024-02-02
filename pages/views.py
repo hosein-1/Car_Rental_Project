@@ -15,7 +15,6 @@ def page(request, slug):
     return render(request, 'pages/page.html', context)
 
 
-
 def questions_list(request):
     questions = Questions.objects.filter(parent=None)
 
@@ -27,6 +26,7 @@ def questions_list(request):
 
 
 def ask_question(request):
+
     if request.method == 'POST':
         form = QuestionForm(request.POST)
         if form.is_valid():
