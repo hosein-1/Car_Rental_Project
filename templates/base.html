@@ -21,14 +21,7 @@
 
   {% block block_header %}
   {% include 'navbar.html' %}
-      {% if messages %}
-    <div class="container">
-        {% for message in messages %}
-            <div class="alert alert-{{ message.tags }}">{{ message }}</div>
-        {% endfor %}
 
-    </div>
-{% endif %}
   {% if banner != False %}
   {% include 'banner.html' %}
 
@@ -40,7 +33,7 @@
   {% endblock body %}
 
 
-  {% include 'sidebar-horizontal.html' %}
+
   {% include 'footer.html' %}
 
 
