@@ -24,7 +24,7 @@
                     <a class="nav-link" href="{% url 'page' 'contactus' %}">ارتباط با ما</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'ask_question'%}">سوالات متداول</a>
+                    <a class="nav-link" href="{% url 'questions_list'%}">سوالات متداول</a>
                 </li>
 
                 {% if not request.user.is_authenticated %}
