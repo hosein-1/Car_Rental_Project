@@ -1,1 +1,2285 @@
-[{"model": "admin.logentry", "pk": 1, "fields": {"action_time": "2024-01-30T11:18:46.908Z", "user": 1, "content_type": 7, "object_id": "1", "object_repr": "شاسی بلند", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 2, "fields": {"action_time": "2024-01-30T11:19:00.434Z", "user": 1, "content_type": 7, "object_id": "2", "object_repr": "اسپورت", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 3, "fields": {"action_time": "2024-01-30T11:19:21.893Z", "user": 1, "content_type": 7, "object_id": "3", "object_repr": "هاچ‌بک", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 4, "fields": {"action_time": "2024-01-30T11:19:56.137Z", "user": 1, "content_type": 7, "object_id": "4", "object_repr": "کراس اوور", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 5, "fields": {"action_time": "2024-01-30T11:20:10.479Z", "user": 1, "content_type": 7, "object_id": "5", "object_repr": "کوپه", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 6, "fields": {"action_time": "2024-01-30T11:20:44.585Z", "user": 1, "content_type": 7, "object_id": "6", "object_repr": "استیشن", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 7, "fields": {"action_time": "2024-01-30T11:20:51.632Z", "user": 1, "content_type": 7, "object_id": "7", "object_repr": "لیموزین", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 8, "fields": {"action_time": "2024-01-30T11:22:10.167Z", "user": 1, "content_type": 8, "object_id": "1", "object_repr": "سانتافه شیش سیلندر", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 9, "fields": {"action_time": "2024-01-30T11:22:47.212Z", "user": 1, "content_type": 10, "object_id": "1", "object_repr": " ", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 10, "fields": {"action_time": "2024-01-30T11:22:57.094Z", "user": 1, "content_type": 9, "object_id": "1", "object_repr": " ", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 11, "fields": {"action_time": "2024-01-30T18:54:49.805Z", "user": 1, "content_type": 12, "object_id": "1", "object_repr": "درباره ما", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 12, "fields": {"action_time": "2024-01-31T13:12:42.509Z", "user": 1, "content_type": 12, "object_id": "2", "object_repr": "تماس با ما", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 13, "fields": {"action_time": "2024-01-31T13:13:12.656Z", "user": 1, "content_type": 12, "object_id": "1", "object_repr": "درباره ما", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"}}, {"model": "admin.logentry", "pk": 14, "fields": {"action_time": "2024-01-31T13:13:19.373Z", "user": 1, "content_type": 12, "object_id": "2", "object_repr": "تماس با ما", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"}}, {"model": "admin.logentry", "pk": 15, "fields": {"action_time": "2024-01-31T13:16:31.162Z", "user": 1, "content_type": 12, "object_id": "2", "object_repr": "تماس با ما", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"}}, {"model": "auth.permission", "pk": 1, "fields": {"name": "Can add log entry", "content_type": 1, "codename": "add_logentry"}}, {"model": "auth.permission", "pk": 2, "fields": {"name": "Can change log entry", "content_type": 1, "codename": "change_logentry"}}, {"model": "auth.permission", "pk": 3, "fields": {"name": "Can delete log entry", "content_type": 1, "codename": "delete_logentry"}}, {"model": "auth.permission", "pk": 4, "fields": {"name": "Can view log entry", "content_type": 1, "codename": "view_logentry"}}, {"model": "auth.permission", "pk": 5, "fields": {"name": "Can add permission", "content_type": 2, "codename": "add_permission"}}, {"model": "auth.permission", "pk": 6, "fields": {"name": "Can change permission", "content_type": 2, "codename": "change_permission"}}, {"model": "auth.permission", "pk": 7, "fields": {"name": "Can delete permission", "content_type": 2, "codename": "delete_permission"}}, {"model": "auth.permission", "pk": 8, "fields": {"name": "Can view permission", "content_type": 2, "codename": "view_permission"}}, {"model": "auth.permission", "pk": 9, "fields": {"name": "Can add group", "content_type": 3, "codename": "add_group"}}, {"model": "auth.permission", "pk": 10, "fields": {"name": "Can change group", "content_type": 3, "codename": "change_group"}}, {"model": "auth.permission", "pk": 11, "fields": {"name": "Can delete group", "content_type": 3, "codename": "delete_group"}}, {"model": "auth.permission", "pk": 12, "fields": {"name": "Can view group", "content_type": 3, "codename": "view_group"}}, {"model": "auth.permission", "pk": 13, "fields": {"name": "Can add content type", "content_type": 4, "codename": "add_contenttype"}}, {"model": "auth.permission", "pk": 14, "fields": {"name": "Can change content type", "content_type": 4, "codename": "change_contenttype"}}, {"model": "auth.permission", "pk": 15, "fields": {"name": "Can delete content type", "content_type": 4, "codename": "delete_contenttype"}}, {"model": "auth.permission", "pk": 16, "fields": {"name": "Can view content type", "content_type": 4, "codename": "view_contenttype"}}, {"model": "auth.permission", "pk": 17, "fields": {"name": "Can add session", "content_type": 5, "codename": "add_session"}}, {"model": "auth.permission", "pk": 18, "fields": {"name": "Can change session", "content_type": 5, "codename": "change_session"}}, {"model": "auth.permission", "pk": 19, "fields": {"name": "Can delete session", "content_type": 5, "codename": "delete_session"}}, {"model": "auth.permission", "pk": 20, "fields": {"name": "Can view session", "content_type": 5, "codename": "view_session"}}, {"model": "auth.permission", "pk": 21, "fields": {"name": "Can add user", "content_type": 6, "codename": "add_customuser"}}, {"model": "auth.permission", "pk": 22, "fields": {"name": "Can change user", "content_type": 6, "codename": "change_customuser"}}, {"model": "auth.permission", "pk": 23, "fields": {"name": "Can delete user", "content_type": 6, "codename": "delete_customuser"}}, {"model": "auth.permission", "pk": 24, "fields": {"name": "Can view user", "content_type": 6, "codename": "view_customuser"}}, {"model": "auth.permission", "pk": 25, "fields": {"name": "Can add دسته بندی", "content_type": 7, "codename": "add_category"}}, {"model": "auth.permission", "pk": 26, "fields": {"name": "Can change دسته بندی", "content_type": 7, "codename": "change_category"}}, {"model": "auth.permission", "pk": 27, "fields": {"name": "Can delete دسته بندی", "content_type": 7, "codename": "delete_category"}}, {"model": "auth.permission", "pk": 28, "fields": {"name": "Can view دسته بندی", "content_type": 7, "codename": "view_category"}}, {"model": "auth.permission", "pk": 29, "fields": {"name": "Can add ماشین", "content_type": 8, "codename": "add_car"}}, {"model": "auth.permission", "pk": 30, "fields": {"name": "Can change ماشین", "content_type": 8, "codename": "change_car"}}, {"model": "auth.permission", "pk": 31, "fields": {"name": "Can delete ماشین", "content_type": 8, "codename": "delete_car"}}, {"model": "auth.permission", "pk": 32, "fields": {"name": "Can view ماشین", "content_type": 8, "codename": "view_car"}}, {"model": "auth.permission", "pk": 33, "fields": {"name": "Can add مشتری", "content_type": 9, "codename": "add_customer"}}, {"model": "auth.permission", "pk": 34, "fields": {"name": "Can change مشتری", "content_type": 9, "codename": "change_customer"}}, {"model": "auth.permission", "pk": 35, "fields": {"name": "Can delete مشتری", "content_type": 9, "codename": "delete_customer"}}, {"model": "auth.permission", "pk": 36, "fields": {"name": "Can view مشتری", "content_type": 9, "codename": "view_customer"}}, {"model": "auth.permission", "pk": 37, "fields": {"name": "Can add راننده", "content_type": 10, "codename": "add_driver"}}, {"model": "auth.permission", "pk": 38, "fields": {"name": "Can change راننده", "content_type": 10, "codename": "change_driver"}}, {"model": "auth.permission", "pk": 39, "fields": {"name": "Can delete راننده", "content_type": 10, "codename": "delete_driver"}}, {"model": "auth.permission", "pk": 40, "fields": {"name": "Can view راننده", "content_type": 10, "codename": "view_driver"}}, {"model": "auth.permission", "pk": 41, "fields": {"name": "Can add رزرو", "content_type": 11, "codename": "add_reservation"}}, {"model": "auth.permission", "pk": 42, "fields": {"name": "Can change رزرو", "content_type": 11, "codename": "change_reservation"}}, {"model": "auth.permission", "pk": 43, "fields": {"name": "Can delete رزرو", "content_type": 11, "codename": "delete_reservation"}}, {"model": "auth.permission", "pk": 44, "fields": {"name": "Can view رزرو", "content_type": 11, "codename": "view_reservation"}}, {"model": "auth.permission", "pk": 45, "fields": {"name": "Can add صفحه", "content_type": 12, "codename": "add_page"}}, {"model": "auth.permission", "pk": 46, "fields": {"name": "Can change صفحه", "content_type": 12, "codename": "change_page"}}, {"model": "auth.permission", "pk": 47, "fields": {"name": "Can delete صفحه", "content_type": 12, "codename": "delete_page"}}, {"model": "auth.permission", "pk": 48, "fields": {"name": "Can view صفحه", "content_type": 12, "codename": "view_page"}}, {"model": "auth.permission", "pk": 49, "fields": {"name": "Can add questions", "content_type": 13, "codename": "add_questions"}}, {"model": "auth.permission", "pk": 50, "fields": {"name": "Can change questions", "content_type": 13, "codename": "change_questions"}}, {"model": "auth.permission", "pk": 51, "fields": {"name": "Can delete questions", "content_type": 13, "codename": "delete_questions"}}, {"model": "auth.permission", "pk": 52, "fields": {"name": "Can view questions", "content_type": 13, "codename": "view_questions"}}, {"model": "contenttypes.contenttype", "pk": 1, "fields": {"app_label": "admin", "model": "logentry"}}, {"model": "contenttypes.contenttype", "pk": 2, "fields": {"app_label": "auth", "model": "permission"}}, {"model": "contenttypes.contenttype", "pk": 3, "fields": {"app_label": "auth", "model": "group"}}, {"model": "contenttypes.contenttype", "pk": 4, "fields": {"app_label": "contenttypes", "model": "contenttype"}}, {"model": "contenttypes.contenttype", "pk": 5, "fields": {"app_label": "sessions", "model": "session"}}, {"model": "contenttypes.contenttype", "pk": 6, "fields": {"app_label": "accounts", "model": "customuser"}}, {"model": "contenttypes.contenttype", "pk": 7, "fields": {"app_label": "cars", "model": "category"}}, {"model": "contenttypes.contenttype", "pk": 8, "fields": {"app_label": "cars", "model": "car"}}, {"model": "contenttypes.contenttype", "pk": 9, "fields": {"app_label": "cars", "model": "customer"}}, {"model": "contenttypes.contenttype", "pk": 10, "fields": {"app_label": "cars", "model": "driver"}}, {"model": "contenttypes.contenttype", "pk": 11, "fields": {"app_label": "cars", "model": "reservation"}}, {"model": "contenttypes.contenttype", "pk": 12, "fields": {"app_label": "pages", "model": "page"}}, {"model": "contenttypes.contenttype", "pk": 13, "fields": {"app_label": "pages", "model": "questions"}}, {"model": "sessions.session", "pk": "llj0gqw5s08raxyl9otwys3vf9n9vepb", "fields": {"session_data": ".eJxVjEEOwiAQRe_C2hCgFDou3fcMzTAMUjWQlHZlvLsh6UK3_73332LBY8_L0Xhb1iiuQovL7xaQnlw6iA8s9yqpln1bg-yKPGmTc438up3u30HGlns9KBOjJrQBnAdgThN4i0HziMAjJIOaiJ13mCxRSGi1MUpFNThPk_h8AQPzOJI:1rV9s2:yzi3NAr6eoMvbGz5yVADWe1MNRp4QEfTUmX75hjuK0Q", "expire_date": "2024-02-14T12:39:14.563Z"}}, {"model": "accounts.customuser", "pk": 1, "fields": {"password": "pbkdf2_sha256$720000$lDLn9OSnM62n70HFRm3Tap$jt/mFMQdFJKHGc7VPk90qkkuOgoFusJwpveJGhiQIug=", "last_login": "2024-01-31T12:39:14.526Z", "is_superuser": true, "username": "admin", "first_name": "", "last_name": "", "email": "admin@aa.ir", "is_staff": true, "is_active": true, "date_joined": "2024-01-30T11:16:40.010Z", "national_code": "", "phone_number": "", "address": "", "age": null, "user_type": "c", "groups": [], "user_permissions": []}}, {"model": "cars.customer", "pk": 1, "fields": {"user": 1}}, {"model": "cars.category", "pk": 1, "fields": {"name": "شاسی بلند", "price": 5}}, {"model": "cars.category", "pk": 2, "fields": {"name": "اسپورت", "price": 10}}, {"model": "cars.category", "pk": 3, "fields": {"name": "هاچ‌بک", "price": 2}}, {"model": "cars.category", "pk": 4, "fields": {"name": "کراس اوور", "price": 4}}, {"model": "cars.category", "pk": 5, "fields": {"name": "کوپه", "price": 6}}, {"model": "cars.category", "pk": 6, "fields": {"name": "استیشن", "price": 12}}, {"model": "cars.category", "pk": 7, "fields": {"name": "لیموزین", "price": 25}}, {"model": "cars.car", "pk": 1, "fields": {"category": 1, "name": "سانتافه شیش سیلندر", "model": "2018", "number_plate": "29د654-23", "color": "ابی", "car_image": "cars/cars_image/default.png", "price": null}}, {"model": "cars.car", "pk": 2, "fields": {"category": 7, "name": "Isuzu", "model": "2001", "number_plate": "1GYFC16259R255228", "color": "Red", "car_image": "cars/cars_image/default.png", "price": 29}}, {"model": "cars.car", "pk": 3, "fields": {"category": 2, "name": "Mercury", "model": "2006", "number_plate": "1GD010CG2BF046401", "color": "Teal", "car_image": "cars/cars_image/default.png", "price": 22}}, {"model": "cars.car", "pk": 4, "fields": {"category": 4, "name": "Pontiac", "model": "2009", "number_plate": "1GT01ZCG7CF918758", "color": "Goldenrod", "car_image": "cars/cars_image/default.png", "price": 22}}, {"model": "cars.car", "pk": 5, "fields": {"category": 6, "name": "Chevrolet", "model": "1999", "number_plate": "WAUEFBFL6CN021702", "color": "Teal", "car_image": "cars/cars_image/default.png", "price": 11}}, {"model": "cars.car", "pk": 6, "fields": {"category": 1, "name": "Aston Martin", "model": "2008", "number_plate": "WBALW7C57ED665390", "color": "Crimson", "car_image": "cars/cars_image/default.png", "price": 28}}, {"model": "cars.car", "pk": 7, "fields": {"category": 2, "name": "Porsche", "model": "2012", "number_plate": "WBAVA33548K899910", "color": "Mauv", "car_image": "cars/cars_image/default.png", "price": 18}}, {"model": "cars.car", "pk": 8, "fields": {"category": 5, "name": "Mitsubishi", "model": "2011", "number_plate": "WBAGN63484D081133", "color": "Turquoise", "car_image": "cars/cars_image/default.png", "price": 19}}, {"model": "cars.car", "pk": 9, "fields": {"category": 6, "name": "Honda", "model": "2010", "number_plate": "3C3CFFER0FT305181", "color": "Yellow", "car_image": "cars/cars_image/ (1).png", "price": 30}}, {"model": "cars.car", "pk": 10, "fields": {"category": 4, "name": "Mitsubishi", "model": "1995", "number_plate": "1B3AZ6JZ3AV949431", "color": "Blue", "car_image": "cars/cars_image/ (2).png", "price": 7}}, {"model": "cars.car", "pk": 11, "fields": {"category": 2, "name": "GMC", "model": "1999", "number_plate": "WBAEJ13453A189375", "color": "Violet", "car_image": "cars/cars_image/ (3).png", "price": 3}}, {"model": "cars.car", "pk": 12, "fields": {"category": 2, "name": "Volkswagen", "model": "2002", "number_plate": "2HNYD28289H495561", "color": "Teal", "car_image": "cars/cars_image/ (4).png", "price": 30}}, {"model": "cars.car", "pk": 13, "fields": {"category": 2, "name": "Mercedes-Benz", "model": "2002", "number_plate": "WBA3C1C53FK231177", "color": "Teal", "car_image": "cars/cars_image/ (5).png", "price": 29}}, {"model": "cars.car", "pk": 14, "fields": {"category": 2, "name": "MINI", "model": "2007", "number_plate": "WBAKF3C52CJ411735", "color": "Aquamarine", "car_image": "cars/cars_image/ (6).png", "price": 5}}, {"model": "cars.car", "pk": 15, "fields": {"category": 2, "name": "Daihatsu", "model": "1992", "number_plate": "2HNYD2H84CH643877", "color": "Violet", "car_image": "cars/cars_image/ (7).png", "price": 1}}, {"model": "cars.car", "pk": 16, "fields": {"category": 5, "name": "Toyota", "model": "2010", "number_plate": "WP1AB2A23FL515717", "color": "Yellow", "car_image": "cars/cars_image/ (8).png", "price": 13}}, {"model": "cars.car", "pk": 17, "fields": {"category": 5, "name": "Chrysler", "model": "2000", "number_plate": "3C63DPJL3CG033827", "color": "Blue", "car_image": "cars/cars_image/ (9).png", "price": 15}}, {"model": "cars.car", "pk": 18, "fields": {"category": 1, "name": "Lincoln", "model": "2008", "number_plate": "JHMFA3F20BS642306", "color": "Red", "car_image": "cars/cars_image/ (10).png", "price": 2}}, {"model": "cars.car", "pk": 19, "fields": {"category": 3, "name": "Volkswagen", "model": "2009", "number_plate": "KNAFU6A2XA5670688", "color": "Green", "car_image": "cars/cars_image/ (1).png", "price": 13}}, {"model": "cars.car", "pk": 20, "fields": {"category": 3, "name": "Chrysler", "model": "2003", "number_plate": "5NPDH4AE2BH734561", "color": "Green", "car_image": "cars/cars_image/ (2).png", "price": 18}}, {"model": "cars.car", "pk": 21, "fields": {"category": 7, "name": "Mitsubishi", "model": "2011", "number_plate": "2HNYD28578H169940", "color": "Crimson", "car_image": "cars/cars_image/ (3).png", "price": 14}}, {"model": "cars.car", "pk": 22, "fields": {"category": 4, "name": "Mercury", "model": "2002", "number_plate": "WBA3A5C56FF983154", "color": "Violet", "car_image": "cars/cars_image/ (4).png", "price": 29}}, {"model": "cars.car", "pk": 23, "fields": {"category": 5, "name": "Chevrolet", "model": "1997", "number_plate": "JN1BY0AP3AM072935", "color": "Purple", "car_image": "cars/cars_image/ (5).png", "price": 22}}, {"model": "cars.car", "pk": 24, "fields": {"category": 3, "name": "Audi", "model": "1994", "number_plate": "KM8NU4CC1CU196384", "color": "Turquoise", "car_image": "cars/cars_image/ (6).png", "price": 23}}, {"model": "cars.car", "pk": 25, "fields": {"category": 5, "name": "Scion", "model": "2004", "number_plate": "1N6AF0LX9EN029760", "color": "Turquoise", "car_image": "cars/cars_image/ (7).png", "price": 22}}, {"model": "cars.car", "pk": 26, "fields": {"category": 3, "name": "Toyota", "model": "1996", "number_plate": "SCFFDCCD8AG111730", "color": "Khaki", "car_image": "cars/cars_image/ (8).png", "price": 16}}, {"model": "cars.car", "pk": 27, "fields": {"category": 6, "name": "Land Rover", "model": "2008", "number_plate": "JM1BL1H44A1114480", "color": "Red", "car_image": "cars/cars_image/ (9).png", "price": 25}}, {"model": "cars.car", "pk": 28, "fields": {"category": 6, "name": "Volkswagen", "model": "1996", "number_plate": "WAUGL78E17A894588", "color": "Puce", "car_image": "cars/cars_image/ (10).png", "price": 16}}, {"model": "cars.car", "pk": 29, "fields": {"category": 3, "name": "Chevrolet", "model": "1998", "number_plate": "WAUDF48H38K196174", "color": "Puce", "car_image": "cars/cars_image/ (4).png", "price": 11}}, {"model": "cars.car", "pk": 30, "fields": {"category": 3, "name": "Dodge", "model": "1969", "number_plate": "WBA8Z5C59FD668326", "color": "Teal", "car_image": "cars/cars_image/ (5).png", "price": 3}}, {"model": "cars.car", "pk": 31, "fields": {"category": 1, "name": "Dodge", "model": "1995", "number_plate": "JM1NC2LFXF0006471", "color": "Orange", "car_image": "cars/cars_image/ (6).png", "price": 20}}, {"model": "cars.car", "pk": 32, "fields": {"category": 1, "name": "Volkswagen", "model": "2009", "number_plate": "5TFBW5F17CX158707", "color": "Indigo", "car_image": "cars/cars_image/ (7).png", "price": 16}}, {"model": "cars.car", "pk": 33, "fields": {"category": 6, "name": "Bentley", "model": "2007", "number_plate": "1HGCR2F33FA819430", "color": "Teal", "car_image": "cars/cars_image/ (8).png", "price": 24}}, {"model": "cars.car", "pk": 34, "fields": {"category": 1, "name": "Mazda", "model": "1989", "number_plate": "5N1AR1NB5CC293113", "color": "Mauv", "car_image": "cars/cars_image/ (9).png", "price": 1}}, {"model": "cars.car", "pk": 35, "fields": {"category": 2, "name": "Aptera", "model": "2009", "number_plate": "5LMJJ2JT9FE772054", "color": "Blue", "car_image": "cars/cars_image/ (10).png", "price": 23}}, {"model": "cars.car", "pk": 36, "fields": {"category": 3, "name": "Toyota", "model": "1994", "number_plate": "WBANA73545C275120", "color": "Maroon", "car_image": "cars/cars_image/ (1).png", "price": 19}}, {"model": "cars.car", "pk": 37, "fields": {"category": 1, "name": "Isuzu", "model": "2006", "number_plate": "4T3BA3BB5FU119494", "color": "Yellow", "car_image": "cars/cars_image/ (2).png", "price": 18}}, {"model": "cars.car", "pk": 38, "fields": {"category": 1, "name": "Mazda", "model": "1999", "number_plate": "WBAWL73559P470821", "color": "Indigo", "car_image": "cars/cars_image/ (3).png", "price": 21}}, {"model": "cars.car", "pk": 39, "fields": {"category": 4, "name": "Toyota", "model": "1996", "number_plate": "1G4PT5SVXE4104325", "color": "Blue", "car_image": "cars/cars_image/ (4).png", "price": 16}}, {"model": "cars.car", "pk": 40, "fields": {"category": 4, "name": "Chevrolet", "model": "2007", "number_plate": "3N1BC1CPXCK096895", "color": "Blue", "car_image": "cars/cars_image/ (5).png", "price": 17}}, {"model": "cars.car", "pk": 41, "fields": {"category": 4, "name": "GMC", "model": "2012", "number_plate": "1GKKRNED1EJ648668", "color": "Pink", "car_image": "cars/cars_image/ (6).png", "price": 29}}, {"model": "cars.car", "pk": 42, "fields": {"category": 4, "name": "Honda", "model": "2009", "number_plate": "SAJWA0F79F8744185", "color": "Khaki", "car_image": "cars/cars_image/ (7).png", "price": 17}}, {"model": "cars.car", "pk": 43, "fields": {"category": 5, "name": "Honda", "model": "2010", "number_plate": "1N6AD0CW7EN655711", "color": "Blue", "car_image": "cars/cars_image/ (8).png", "price": 1}}, {"model": "cars.car", "pk": 44, "fields": {"category": 6, "name": "BMW", "model": "2009", "number_plate": "WAUHF78P59A582922", "color": "Aquamarine", "car_image": "cars/cars_image/ (9).png", "price": 7}}, {"model": "cars.car", "pk": 45, "fields": {"category": 7, "name": "Chrysler", "model": "2008", "number_plate": "WBAVB17556N932002", "color": "Indigo", "car_image": "cars/cars_image/ (10).png", "price": 12}}, {"model": "cars.car", "pk": 46, "fields": {"category": 3, "name": "Jaguar", "model": "2008", "number_plate": "WAUKF98E77A265737", "color": "Blue", "car_image": "cars/cars_image/ (1).png", "price": 3}}, {"model": "cars.car", "pk": 47, "fields": {"category": 7, "name": "Saab", "model": "1999", "number_plate": "JTDZN3EU7FJ506787", "color": "Goldenrod", "car_image": "cars/cars_image/ (2).png", "price": 16}}, {"model": "cars.car", "pk": 48, "fields": {"category": 2, "name": "Kia", "model": "2005", "number_plate": "1G6AB5R30E0513770", "color": "Green", "car_image": "cars/cars_image/ (3).png", "price": 24}}, {"model": "cars.car", "pk": 49, "fields": {"category": 1, "name": "Hyundai", "model": "2003", "number_plate": "1FTMF1E84AK573815", "color": "Green", "car_image": "cars/cars_image/ (4).png", "price": 2}}, {"model": "cars.car", "pk": 50, "fields": {"category": 7, "name": "Porsche", "model": "2011", "number_plate": "JN8AZ1MU5EW178721", "color": "Maroon", "car_image": "cars/cars_image/ (5).png", "price": 14}}, {"model": "cars.car", "pk": 51, "fields": {"category": 2, "name": "Jeep", "model": "2011", "number_plate": "5N1AA0ND2EN325154", "color": "Red", "car_image": "cars/cars_image/ (6).png", "price": 3}}, {"model": "cars.car", "pk": 52, "fields": {"category": 6, "name": "Pontiac", "model": "1974", "number_plate": "4T3BA3BB6DU161458", "color": "Turquoise", "car_image": "cars/cars_image/ (7).png", "price": 28}}, {"model": "cars.car", "pk": 53, "fields": {"category": 2, "name": "Ford", "model": "1993", "number_plate": "5UXFE4C52AL501741", "color": "Mauv", "car_image": "cars/cars_image/ (8).png", "price": 14}}, {"model": "cars.car", "pk": 54, "fields": {"category": 3, "name": "Volkswagen", "model": "2001", "number_plate": "1N6AA0CA2DN480215", "color": "Turquoise", "car_image": "cars/cars_image/ (9).png", "price": 28}}, {"model": "cars.car", "pk": 55, "fields": {"category": 2, "name": "Audi", "model": "2002", "number_plate": "1J4AA2D15AL515134", "color": "Turquoise", "car_image": "cars/cars_image/ (10).png", "price": 12}}, {"model": "cars.car", "pk": 56, "fields": {"category": 1, "name": "Dodge", "model": "2000", "number_plate": "WAUEL94FX5N320241", "color": "Fuscia", "car_image": "cars/cars_image/ (1).png", "price": 12}}, {"model": "cars.car", "pk": 57, "fields": {"category": 7, "name": "Nissan", "model": "2002", "number_plate": "WA1UFAFL2DA706887", "color": "Red", "car_image": "cars/cars_image/ (2).png", "price": 15}}, {"model": "cars.car", "pk": 58, "fields": {"category": 6, "name": "Toyota", "model": "2006", "number_plate": "WAUML54B03N751301", "color": "Yellow", "car_image": "cars/cars_image/ (3).png", "price": 6}}, {"model": "cars.car", "pk": 59, "fields": {"category": 2, "name": "Pontiac", "model": "1987", "number_plate": "WAUSH78E66A852623", "color": "Orange", "car_image": "cars/cars_image/ (4).png", "price": 3}}, {"model": "cars.car", "pk": 60, "fields": {"category": 1, "name": "GMC", "model": "2008", "number_plate": "5J6TF3H52FL854728", "color": "Fuscia", "car_image": "cars/cars_image/ (5).png", "price": 22}}, {"model": "cars.car", "pk": 61, "fields": {"category": 7, "name": "Acura", "model": "1994", "number_plate": "WBASP2C59CC452004", "color": "Green", "car_image": "cars/cars_image/ (6).png", "price": 24}}, {"model": "cars.car", "pk": 62, "fields": {"category": 5, "name": "Cadillac", "model": "2008", "number_plate": "WAUUL68E95A034934", "color": "Green", "car_image": "cars/cars_image/ (7).png", "price": 24}}, {"model": "cars.car", "pk": 63, "fields": {"category": 5, "name": "GMC", "model": "1996", "number_plate": "WBAKN9C57ED640449", "color": "Violet", "car_image": "cars/cars_image/ (8).png", "price": 13}}, {"model": "cars.car", "pk": 64, "fields": {"category": 7, "name": "Oldsmobile", "model": "1997", "number_plate": "3N1AB6AP8AL628828", "color": "Fuscia", "car_image": "cars/cars_image/ (9).png", "price": 6}}, {"model": "cars.car", "pk": 65, "fields": {"category": 5, "name": "Audi", "model": "2008", "number_plate": "5N1AT2ML3EC531318", "color": "Violet", "car_image": "cars/cars_image/ (10).png", "price": 1}}, {"model": "cars.car", "pk": 66, "fields": {"category": 4, "name": "Hyundai", "model": "2012", "number_plate": "5N1AA0NE6FN880778", "color": "Yellow", "car_image": "cars/cars_image/ (1).png", "price": 25}}, {"model": "cars.car", "pk": 67, "fields": {"category": 4, "name": "Smart", "model": "2012", "number_plate": "3LNHL2GC6BR884160", "color": "Red", "car_image": "cars/cars_image/ (2).png", "price": 26}}, {"model": "cars.car", "pk": 68, "fields": {"category": 1, "name": "Infiniti", "model": "2010", "number_plate": "2HNYD18846H218013", "color": "Red", "car_image": "cars/cars_image/ (3).png", "price": 16}}, {"model": "cars.car", "pk": 69, "fields": {"category": 1, "name": "Lamborghini", "model": "2012", "number_plate": "WAUDH78E96A306231", "color": "Puce", "car_image": "cars/cars_image/ (4).png", "price": 30}}, {"model": "cars.car", "pk": 70, "fields": {"category": 3, "name": "Volkswagen", "model": "1995", "number_plate": "JN1CV6EK6AM397352", "color": "Orange", "car_image": "cars/cars_image/ (5).png", "price": 1}}, {"model": "cars.car", "pk": 71, "fields": {"category": 5, "name": "Buick", "model": "1991", "number_plate": "WAUWFBFL8CA696396", "color": "Indigo", "car_image": "cars/cars_image/ (6).png", "price": 7}}, {"model": "cars.car", "pk": 72, "fields": {"category": 6, "name": "Hyundai", "model": "1997", "number_plate": "WBABV13425J123974", "color": "Aquamarine", "car_image": "cars/cars_image/ (7).png", "price": 26}}, {"model": "cars.car", "pk": 73, "fields": {"category": 2, "name": "Dodge", "model": "2002", "number_plate": "WBAHN03566D085095", "color": "Goldenrod", "car_image": "cars/cars_image/ (8).png", "price": 14}}, {"model": "cars.car", "pk": 74, "fields": {"category": 3, "name": "BMW", "model": "2010", "number_plate": "5GALRCED0AJ207534", "color": "Turquoise", "car_image": "cars/cars_image/ (9).png", "price": 8}}, {"model": "cars.car", "pk": 75, "fields": {"category": 7, "name": "Ford", "model": "1995", "number_plate": "2C3CDYCJ4EH813739", "color": "Purple", "car_image": "cars/cars_image/ (10).png", "price": 3}}, {"model": "cars.car", "pk": 76, "fields": {"category": 1, "name": "Volvo", "model": "2007", "number_plate": "2B3CA3CV0AH586653", "color": "Crimson", "car_image": "cars/cars_image/ (1).png", "price": 4}}, {"model": "cars.car", "pk": 77, "fields": {"category": 4, "name": "Audi", "model": "2002", "number_plate": "JH4CL96848C796685", "color": "Puce", "car_image": "cars/cars_image/ (2).png", "price": 19}}, {"model": "cars.car", "pk": 78, "fields": {"category": 4, "name": "Plymouth", "model": "1996", "number_plate": "WBA3A5G52CN139527", "color": "Khaki", "car_image": "cars/cars_image/ (3).png", "price": 27}}, {"model": "cars.car", "pk": 79, "fields": {"category": 5, "name": "Ford", "model": "2007", "number_plate": "SCBZU25E31C126786", "color": "Aquamarine", "car_image": "cars/cars_image/ (4).png", "price": 24}}, {"model": "cars.car", "pk": 80, "fields": {"category": 5, "name": "Volkswagen", "model": "1993", "number_plate": "WDDGF4HBXCR337436", "color": "Pink", "car_image": "cars/cars_image/ (5).png", "price": 17}}, {"model": "cars.car", "pk": 81, "fields": {"category": 3, "name": "Acura", "model": "2011", "number_plate": "WBA3N3C57EK922975", "color": "Violet", "car_image": "cars/cars_image/ (6).png", "price": 23}}, {"model": "cars.car", "pk": 82, "fields": {"category": 6, "name": "Mazda", "model": "2001", "number_plate": "JHMZE2H30ES286171", "color": "Red", "car_image": "cars/cars_image/ (7).png", "price": 15}}, {"model": "cars.car", "pk": 83, "fields": {"category": 5, "name": "Porsche", "model": "1987", "number_plate": "YV1982BW9A1892428", "color": "Maroon", "car_image": "cars/cars_image/ (8).png", "price": 24}}, {"model": "cars.car", "pk": 84, "fields": {"category": 3, "name": "Ford", "model": "1984", "number_plate": "1GYS4EEJ3BR168123", "color": "Khaki", "car_image": "cars/cars_image/ (9).png", "price": 23}}, {"model": "cars.car", "pk": 85, "fields": {"category": 3, "name": "Bentley", "model": "2009", "number_plate": "WBA1F5C59EV878265", "color": "Green", "car_image": "cars/cars_image/ (10).png", "price": 28}}, {"model": "cars.car", "pk": 86, "fields": {"category": 4, "name": "Mercedes-Benz", "model": "2010", "number_plate": "WBANA53515B619531", "color": "Yellow", "car_image": "cars/cars_image/ (1).png", "price": 19}}, {"model": "cars.car", "pk": 87, "fields": {"category": 7, "name": "Mazda", "model": "1999", "number_plate": "1GYS4CEF8DR120863", "color": "Turquoise", "car_image": "cars/cars_image/ (2).png", "price": 30}}, {"model": "cars.car", "pk": 88, "fields": {"category": 5, "name": "Suzuki", "model": "1996", "number_plate": "W04GT5GC9B1489380", "color": "Orange", "car_image": "cars/cars_image/ (3).png", "price": 3}}, {"model": "cars.car", "pk": 89, "fields": {"category": 1, "name": "Saturn", "model": "2006", "number_plate": "WBA6B4C52DD005215", "color": "Goldenrod", "car_image": "cars/cars_image/ (4).png", "price": 18}}, {"model": "cars.car", "pk": 90, "fields": {"category": 1, "name": "Jeep", "model": "2012", "number_plate": "SCBBP9ZA3DC705192", "color": "Indigo", "car_image": "cars/cars_image/ (5).png", "price": 28}}, {"model": "cars.car", "pk": 91, "fields": {"category": 2, "name": "Cadillac", "model": "1999", "number_plate": "JN8AF5MR8CT083757", "color": "Violet", "car_image": "cars/cars_image/ (6).png", "price": 2}}, {"model": "cars.car", "pk": 92, "fields": {"category": 5, "name": "Chevrolet", "model": "1993", "number_plate": "WBAWB33547P786445", "color": "Maroon", "car_image": "cars/cars_image/ (7).png", "price": 23}}, {"model": "cars.car", "pk": 93, "fields": {"category": 6, "name": "Honda", "model": "2001", "number_plate": "19XFA1E56AE709736", "color": "Orange", "car_image": "cars/cars_image/ (8).png", "price": 6}}, {"model": "cars.car", "pk": 94, "fields": {"category": 6, "name": "Oldsmobile", "model": "1966", "number_plate": "WBAEJ13481A609160", "color": "Pink", "car_image": "cars/cars_image/ (9).png", "price": 26}}, {"model": "cars.car", "pk": 95, "fields": {"category": 4, "name": "Pontiac", "model": "1989", "number_plate": "JH4CU2F62BC624729", "color": "Yellow", "car_image": "cars/cars_image/ (10).png", "price": 21}}, {"model": "cars.car", "pk": 96, "fields": {"category": 6, "name": "Lexus", "model": "2011", "number_plate": "WAU3GAFR4EA478411", "color": "Goldenrod", "car_image": "cars/cars_image/default.png", "price": 28}}, {"model": "cars.car", "pk": 97, "fields": {"category": 7, "name": "Volvo", "model": "2005", "number_plate": "JTHFN2EY4A9501085", "color": "Red", "car_image": "cars/cars_image/default.png", "price": 25}}, {"model": "cars.car", "pk": 98, "fields": {"category": 4, "name": "BMW", "model": "2009", "number_plate": "1FTEW1CF0FF106980", "color": "Pink", "car_image": "cars/cars_image/default.png", "price": 11}}, {"model": "cars.car", "pk": 99, "fields": {"category": 4, "name": "Mercedes-Benz", "model": "2005", "number_plate": "JHMZF1C65CS805544", "color": "Turquoise", "car_image": "cars/cars_image/default.png", "price": 5}}, {"model": "cars.car", "pk": 100, "fields": {"category": 2, "name": "Mercedes-Benz", "model": "2006", "number_plate": "JN8AE2KP3E9482143", "color": "Orange", "car_image": "cars/cars_image/default.png", "price": 16}}, {"model": "cars.car", "pk": 101, "fields": {"category": 3, "name": "GMC", "model": "1997", "number_plate": "2C4JDGAG9CR197192", "color": "Maroon", "car_image": "cars/cars_image/default.png", "price": 4}}, {"model": "cars.driver", "pk": 1, "fields": {"user": 1, "work_experience": "5", "certificate_base": "2"}}, {"model": "cars.reservation", "pk": 1, "fields": {"customer": 1, "car": 37, "driver": null, "start_date": "1402-11-11", "end_date": "1402-11-13", "delivery_address": "asfdasfd", "is_paid": "p"}}, {"model": "pages.page", "pk": 1, "fields": {"title": "درباره ما", "slug": "aboutus", "body": "<div class=\"div-mid\">\r\n    <div class=\"container my-5\">\r\n        <div class=\"row big-card\">\r\n            <div class=\"col-10 row mx-auto\">\r\n                <div class=\"col-3 big-card-right\"></div>\r\n                <div class=\"col-9 big-card-left\">\r\n                    <h4 class=\"mb-5\">درباره با ما</h4>\r\n                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque ipsa culpa repellendus mollitia eveniet molestias magnam deserunt, error aut consectetur obcaecati adipisci eligendi fuga nihil assumenda, facilis aliquid ea sunt.</p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>", "is_active": true}}, {"model": "pages.page", "pk": 2, "fields": {"title": "تماس با ما", "slug": "contactus", "body": "<div class=\"div-mid\">\r\n    <div class=\"container my-5\">\r\n        <div class=\"row big-card\">\r\n            <div class=\"col-10 row mx-auto\">\r\n                <div class=\"col-3 big-card-right\"></div>\r\n                <div class=\"col-9 big-card-left\">\r\n                    <h4 class=\"mb-5\">تماس با ما</h4>\r\n                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque ipsa culpa repellendus mollitia eveniet molestias magnam deserunt, error aut consectetur obcaecati adipisci eligendi fuga nihil assumenda, facilis aliquid ea sunt.</p>\r\n                    <ul class=\"list-group list-group-flush mb-3\">\r\n                        <li class=\"list-group-item\">شماره: 0656566565</li>\r\n                        <li class=\"list-group-item\">تلگرام tel.com</li>\r\n                        <li class=\"list-group-item\">اینستا گراکم</li>\r\n                        <li class=\"list-group-item\">واتساپ </li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>", "is_active": true}}]
+[
+    {
+        "model": "admin.logentry",
+        "pk": 1,
+        "fields": {
+            "action_time": "2024-01-30T11:18:46.908Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "1",
+            "object_repr": "شاسی بلند",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 2,
+        "fields": {
+            "action_time": "2024-01-30T11:19:00.434Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "2",
+            "object_repr": "اسپورت",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 3,
+        "fields": {
+            "action_time": "2024-01-30T11:19:21.893Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "3",
+            "object_repr": "هاچ‌بک",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 4,
+        "fields": {
+            "action_time": "2024-01-30T11:19:56.137Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "4",
+            "object_repr": "کراس اوور",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 5,
+        "fields": {
+            "action_time": "2024-01-30T11:20:10.479Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "5",
+            "object_repr": "کوپه",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 6,
+        "fields": {
+            "action_time": "2024-01-30T11:20:44.585Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "6",
+            "object_repr": "استیشن",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 7,
+        "fields": {
+            "action_time": "2024-01-30T11:20:51.632Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "7",
+            "object_repr": "لیموزین",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 8,
+        "fields": {
+            "action_time": "2024-01-30T11:22:10.167Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "1",
+            "object_repr": "سانتافه شیش سیلندر",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 9,
+        "fields": {
+            "action_time": "2024-01-30T11:22:47.212Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "1",
+            "object_repr": " ",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 10,
+        "fields": {
+            "action_time": "2024-01-30T11:22:57.094Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "1",
+            "object_repr": " ",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 11,
+        "fields": {
+            "action_time": "2024-01-30T18:54:49.805Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "1",
+            "object_repr": "درباره ما",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 12,
+        "fields": {
+            "action_time": "2024-01-31T13:12:42.509Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "2",
+            "object_repr": "تماس با ما",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 13,
+        "fields": {
+            "action_time": "2024-01-31T13:13:12.656Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "1",
+            "object_repr": "درباره ما",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 14,
+        "fields": {
+            "action_time": "2024-01-31T13:13:19.373Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "2",
+            "object_repr": "تماس با ما",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 15,
+        "fields": {
+            "action_time": "2024-01-31T13:16:31.162Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "2",
+            "object_repr": "تماس با ما",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 1,
+        "fields": {
+            "name": "Can add log entry",
+            "content_type": 1,
+            "codename": "add_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 2,
+        "fields": {
+            "name": "Can change log entry",
+            "content_type": 1,
+            "codename": "change_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 3,
+        "fields": {
+            "name": "Can delete log entry",
+            "content_type": 1,
+            "codename": "delete_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 4,
+        "fields": {
+            "name": "Can view log entry",
+            "content_type": 1,
+            "codename": "view_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 5,
+        "fields": {
+            "name": "Can add permission",
+            "content_type": 2,
+            "codename": "add_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 6,
+        "fields": {
+            "name": "Can change permission",
+            "content_type": 2,
+            "codename": "change_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 7,
+        "fields": {
+            "name": "Can delete permission",
+            "content_type": 2,
+            "codename": "delete_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 8,
+        "fields": {
+            "name": "Can view permission",
+            "content_type": 2,
+            "codename": "view_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 9,
+        "fields": {
+            "name": "Can add group",
+            "content_type": 3,
+            "codename": "add_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 10,
+        "fields": {
+            "name": "Can change group",
+            "content_type": 3,
+            "codename": "change_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 11,
+        "fields": {
+            "name": "Can delete group",
+            "content_type": 3,
+            "codename": "delete_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 12,
+        "fields": {
+            "name": "Can view group",
+            "content_type": 3,
+            "codename": "view_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 13,
+        "fields": {
+            "name": "Can add content type",
+            "content_type": 4,
+            "codename": "add_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 14,
+        "fields": {
+            "name": "Can change content type",
+            "content_type": 4,
+            "codename": "change_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 15,
+        "fields": {
+            "name": "Can delete content type",
+            "content_type": 4,
+            "codename": "delete_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 16,
+        "fields": {
+            "name": "Can view content type",
+            "content_type": 4,
+            "codename": "view_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 17,
+        "fields": {
+            "name": "Can add session",
+            "content_type": 5,
+            "codename": "add_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 18,
+        "fields": {
+            "name": "Can change session",
+            "content_type": 5,
+            "codename": "change_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 19,
+        "fields": {
+            "name": "Can delete session",
+            "content_type": 5,
+            "codename": "delete_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 20,
+        "fields": {
+            "name": "Can view session",
+            "content_type": 5,
+            "codename": "view_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 21,
+        "fields": {
+            "name": "Can add user",
+            "content_type": 6,
+            "codename": "add_customuser"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 22,
+        "fields": {
+            "name": "Can change user",
+            "content_type": 6,
+            "codename": "change_customuser"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 23,
+        "fields": {
+            "name": "Can delete user",
+            "content_type": 6,
+            "codename": "delete_customuser"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 24,
+        "fields": {
+            "name": "Can view user",
+            "content_type": 6,
+            "codename": "view_customuser"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 25,
+        "fields": {
+            "name": "Can add دسته بندی",
+            "content_type": 7,
+            "codename": "add_category"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 26,
+        "fields": {
+            "name": "Can change دسته بندی",
+            "content_type": 7,
+            "codename": "change_category"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 27,
+        "fields": {
+            "name": "Can delete دسته بندی",
+            "content_type": 7,
+            "codename": "delete_category"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 28,
+        "fields": {
+            "name": "Can view دسته بندی",
+            "content_type": 7,
+            "codename": "view_category"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 29,
+        "fields": {
+            "name": "Can add ماشین",
+            "content_type": 8,
+            "codename": "add_car"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 30,
+        "fields": {
+            "name": "Can change ماشین",
+            "content_type": 8,
+            "codename": "change_car"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 31,
+        "fields": {
+            "name": "Can delete ماشین",
+            "content_type": 8,
+            "codename": "delete_car"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 32,
+        "fields": {
+            "name": "Can view ماشین",
+            "content_type": 8,
+            "codename": "view_car"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 33,
+        "fields": {
+            "name": "Can add مشتری",
+            "content_type": 9,
+            "codename": "add_customer"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 34,
+        "fields": {
+            "name": "Can change مشتری",
+            "content_type": 9,
+            "codename": "change_customer"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 35,
+        "fields": {
+            "name": "Can delete مشتری",
+            "content_type": 9,
+            "codename": "delete_customer"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 36,
+        "fields": {
+            "name": "Can view مشتری",
+            "content_type": 9,
+            "codename": "view_customer"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 37,
+        "fields": {
+            "name": "Can add راننده",
+            "content_type": 10,
+            "codename": "add_driver"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 38,
+        "fields": {
+            "name": "Can change راننده",
+            "content_type": 10,
+            "codename": "change_driver"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 39,
+        "fields": {
+            "name": "Can delete راننده",
+            "content_type": 10,
+            "codename": "delete_driver"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 40,
+        "fields": {
+            "name": "Can view راننده",
+            "content_type": 10,
+            "codename": "view_driver"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 41,
+        "fields": {
+            "name": "Can add رزرو",
+            "content_type": 11,
+            "codename": "add_reservation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 42,
+        "fields": {
+            "name": "Can change رزرو",
+            "content_type": 11,
+            "codename": "change_reservation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 43,
+        "fields": {
+            "name": "Can delete رزرو",
+            "content_type": 11,
+            "codename": "delete_reservation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 44,
+        "fields": {
+            "name": "Can view رزرو",
+            "content_type": 11,
+            "codename": "view_reservation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 45,
+        "fields": {
+            "name": "Can add صفحه",
+            "content_type": 12,
+            "codename": "add_page"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 46,
+        "fields": {
+            "name": "Can change صفحه",
+            "content_type": 12,
+            "codename": "change_page"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 47,
+        "fields": {
+            "name": "Can delete صفحه",
+            "content_type": 12,
+            "codename": "delete_page"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 48,
+        "fields": {
+            "name": "Can view صفحه",
+            "content_type": 12,
+            "codename": "view_page"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 49,
+        "fields": {
+            "name": "Can add questions",
+            "content_type": 13,
+            "codename": "add_questions"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 50,
+        "fields": {
+            "name": "Can change questions",
+            "content_type": 13,
+            "codename": "change_questions"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 51,
+        "fields": {
+            "name": "Can delete questions",
+            "content_type": 13,
+            "codename": "delete_questions"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 52,
+        "fields": {
+            "name": "Can view questions",
+            "content_type": 13,
+            "codename": "view_questions"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 1,
+        "fields": {
+            "app_label": "admin",
+            "model": "logentry"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 2,
+        "fields": {
+            "app_label": "auth",
+            "model": "permission"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 3,
+        "fields": {
+            "app_label": "auth",
+            "model": "group"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 4,
+        "fields": {
+            "app_label": "contenttypes",
+            "model": "contenttype"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 5,
+        "fields": {
+            "app_label": "sessions",
+            "model": "session"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 6,
+        "fields": {
+            "app_label": "accounts",
+            "model": "customuser"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 7,
+        "fields": {
+            "app_label": "cars",
+            "model": "category"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 8,
+        "fields": {
+            "app_label": "cars",
+            "model": "car"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 9,
+        "fields": {
+            "app_label": "cars",
+            "model": "customer"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 10,
+        "fields": {
+            "app_label": "cars",
+            "model": "driver"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 11,
+        "fields": {
+            "app_label": "cars",
+            "model": "reservation"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 12,
+        "fields": {
+            "app_label": "pages",
+            "model": "page"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 13,
+        "fields": {
+            "app_label": "pages",
+            "model": "questions"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "llj0gqw5s08raxyl9otwys3vf9n9vepb",
+        "fields": {
+            "session_data": ".eJxVjEEOwiAQRe_C2hCgFDou3fcMzTAMUjWQlHZlvLsh6UK3_73332LBY8_L0Xhb1iiuQovL7xaQnlw6iA8s9yqpln1bg-yKPGmTc438up3u30HGlns9KBOjJrQBnAdgThN4i0HziMAjJIOaiJ13mCxRSGi1MUpFNThPk_h8AQPzOJI:1rV9s2:yzi3NAr6eoMvbGz5yVADWe1MNRp4QEfTUmX75hjuK0Q",
+            "expire_date": "2024-02-14T12:39:14.563Z"
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$lDLn9OSnM62n70HFRm3Tap$jt/mFMQdFJKHGc7VPk90qkkuOgoFusJwpveJGhiQIug=",
+            "last_login": "2024-01-31T12:39:14.526Z",
+            "is_superuser": true,
+            "username": "admin",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2024-01-30T11:16:40.010Z",
+            "email": "admin@aa.ir",
+            "first_name": "",
+            "last_name": "",
+            "national_code": "",
+            "phone_number": "",
+            "address": "",
+            "age": null,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "cars.category",
+        "pk": 1,
+        "fields": {
+            "name": "شاسی بلند"
+        }
+    },
+    {
+        "model": "cars.category",
+        "pk": 2,
+        "fields": {
+            "name": "اسپورت"
+        }
+    },
+    {
+        "model": "cars.category",
+        "pk": 3,
+        "fields": {
+            "name": "هاچ‌بک"
+        }
+    },
+    {
+        "model": "cars.category",
+        "pk": 4,
+        "fields": {
+            "name": "کراس اوور"
+        }
+    },
+    {
+        "model": "cars.category",
+        "pk": 5,
+        "fields": {
+            "name": "کوپه"
+        }
+    },
+    {
+        "model": "cars.category",
+        "pk": 6,
+        "fields": {
+            "name": "استیشن"
+        }
+    },
+    {
+        "model": "cars.category",
+        "pk": 7,
+        "fields": {
+            "name": "لیموزین"
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 1,
+        "fields": {
+            "category": 1,
+            "name": "سانتافه شیش سیلندر",
+            "model": "2018",
+            "number_plate": "29د654-23",
+            "color": "ابی",
+            "car_image": "cars/cars_image/default.png",
+            "price": 1
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 2,
+        "fields": {
+            "category": 7,
+            "name": "Isuzu",
+            "model": "2001",
+            "number_plate": "1GYFC16259R255228",
+            "color": "Red",
+            "car_image": "cars/cars_image/default.png",
+            "price": 29
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 3,
+        "fields": {
+            "category": 2,
+            "name": "Mercury",
+            "model": "2006",
+            "number_plate": "1GD010CG2BF046401",
+            "color": "Teal",
+            "car_image": "cars/cars_image/default.png",
+            "price": 22
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 4,
+        "fields": {
+            "category": 4,
+            "name": "Pontiac",
+            "model": "2009",
+            "number_plate": "1GT01ZCG7CF918758",
+            "color": "Goldenrod",
+            "car_image": "cars/cars_image/default.png",
+            "price": 22
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 5,
+        "fields": {
+            "category": 6,
+            "name": "Chevrolet",
+            "model": "1999",
+            "number_plate": "WAUEFBFL6CN021702",
+            "color": "Teal",
+            "car_image": "cars/cars_image/default.png",
+            "price": 11
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 6,
+        "fields": {
+            "category": 1,
+            "name": "Aston Martin",
+            "model": "2008",
+            "number_plate": "WBALW7C57ED665390",
+            "color": "Crimson",
+            "car_image": "cars/cars_image/default.png",
+            "price": 28
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 7,
+        "fields": {
+            "category": 2,
+            "name": "Porsche",
+            "model": "2012",
+            "number_plate": "WBAVA33548K899910",
+            "color": "Mauv",
+            "car_image": "cars/cars_image/default.png",
+            "price": 18
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 8,
+        "fields": {
+            "category": 5,
+            "name": "Mitsubishi",
+            "model": "2011",
+            "number_plate": "WBAGN63484D081133",
+            "color": "Turquoise",
+            "car_image": "cars/cars_image/default.png",
+            "price": 19
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 9,
+        "fields": {
+            "category": 6,
+            "name": "Honda",
+            "model": "2010",
+            "number_plate": "3C3CFFER0FT305181",
+            "color": "Yellow",
+            "car_image": "cars/cars_image/ (1).png",
+            "price": 30
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 10,
+        "fields": {
+            "category": 4,
+            "name": "Mitsubishi",
+            "model": "1995",
+            "number_plate": "1B3AZ6JZ3AV949431",
+            "color": "Blue",
+            "car_image": "cars/cars_image/ (2).png",
+            "price": 7
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 11,
+        "fields": {
+            "category": 2,
+            "name": "GMC",
+            "model": "1999",
+            "number_plate": "WBAEJ13453A189375",
+            "color": "Violet",
+            "car_image": "cars/cars_image/ (3).png",
+            "price": 3
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 12,
+        "fields": {
+            "category": 2,
+            "name": "Volkswagen",
+            "model": "2002",
+            "number_plate": "2HNYD28289H495561",
+            "color": "Teal",
+            "car_image": "cars/cars_image/ (4).png",
+            "price": 30
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 13,
+        "fields": {
+            "category": 2,
+            "name": "Mercedes-Benz",
+            "model": "2002",
+            "number_plate": "WBA3C1C53FK231177",
+            "color": "Teal",
+            "car_image": "cars/cars_image/ (5).png",
+            "price": 29
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 14,
+        "fields": {
+            "category": 2,
+            "name": "MINI",
+            "model": "2007",
+            "number_plate": "WBAKF3C52CJ411735",
+            "color": "Aquamarine",
+            "car_image": "cars/cars_image/ (6).png",
+            "price": 5
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 15,
+        "fields": {
+            "category": 2,
+            "name": "Daihatsu",
+            "model": "1992",
+            "number_plate": "2HNYD2H84CH643877",
+            "color": "Violet",
+            "car_image": "cars/cars_image/ (7).png",
+            "price": 1
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 16,
+        "fields": {
+            "category": 5,
+            "name": "Toyota",
+            "model": "2010",
+            "number_plate": "WP1AB2A23FL515717",
+            "color": "Yellow",
+            "car_image": "cars/cars_image/ (8).png",
+            "price": 13
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 17,
+        "fields": {
+            "category": 5,
+            "name": "Chrysler",
+            "model": "2000",
+            "number_plate": "3C63DPJL3CG033827",
+            "color": "Blue",
+            "car_image": "cars/cars_image/ (9).png",
+            "price": 15
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 18,
+        "fields": {
+            "category": 1,
+            "name": "Lincoln",
+            "model": "2008",
+            "number_plate": "JHMFA3F20BS642306",
+            "color": "Red",
+            "car_image": "cars/cars_image/ (10).png",
+            "price": 2
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 19,
+        "fields": {
+            "category": 3,
+            "name": "Volkswagen",
+            "model": "2009",
+            "number_plate": "KNAFU6A2XA5670688",
+            "color": "Green",
+            "car_image": "cars/cars_image/ (1).png",
+            "price": 13
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 20,
+        "fields": {
+            "category": 3,
+            "name": "Chrysler",
+            "model": "2003",
+            "number_plate": "5NPDH4AE2BH734561",
+            "color": "Green",
+            "car_image": "cars/cars_image/ (2).png",
+            "price": 18
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 21,
+        "fields": {
+            "category": 7,
+            "name": "Mitsubishi",
+            "model": "2011",
+            "number_plate": "2HNYD28578H169940",
+            "color": "Crimson",
+            "car_image": "cars/cars_image/ (3).png",
+            "price": 14
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 22,
+        "fields": {
+            "category": 4,
+            "name": "Mercury",
+            "model": "2002",
+            "number_plate": "WBA3A5C56FF983154",
+            "color": "Violet",
+            "car_image": "cars/cars_image/ (4).png",
+            "price": 29
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 23,
+        "fields": {
+            "category": 5,
+            "name": "Chevrolet",
+            "model": "1997",
+            "number_plate": "JN1BY0AP3AM072935",
+            "color": "Purple",
+            "car_image": "cars/cars_image/ (5).png",
+            "price": 22
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 24,
+        "fields": {
+            "category": 3,
+            "name": "Audi",
+            "model": "1994",
+            "number_plate": "KM8NU4CC1CU196384",
+            "color": "Turquoise",
+            "car_image": "cars/cars_image/ (6).png",
+            "price": 23
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 25,
+        "fields": {
+            "category": 5,
+            "name": "Scion",
+            "model": "2004",
+            "number_plate": "1N6AF0LX9EN029760",
+            "color": "Turquoise",
+            "car_image": "cars/cars_image/ (7).png",
+            "price": 22
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 26,
+        "fields": {
+            "category": 3,
+            "name": "Toyota",
+            "model": "1996",
+            "number_plate": "SCFFDCCD8AG111730",
+            "color": "Khaki",
+            "car_image": "cars/cars_image/ (8).png",
+            "price": 16
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 27,
+        "fields": {
+            "category": 6,
+            "name": "Land Rover",
+            "model": "2008",
+            "number_plate": "JM1BL1H44A1114480",
+            "color": "Red",
+            "car_image": "cars/cars_image/ (9).png",
+            "price": 25
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 28,
+        "fields": {
+            "category": 6,
+            "name": "Volkswagen",
+            "model": "1996",
+            "number_plate": "WAUGL78E17A894588",
+            "color": "Puce",
+            "car_image": "cars/cars_image/ (10).png",
+            "price": 16
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 29,
+        "fields": {
+            "category": 3,
+            "name": "Chevrolet",
+            "model": "1998",
+            "number_plate": "WAUDF48H38K196174",
+            "color": "Puce",
+            "car_image": "cars/cars_image/ (4).png",
+            "price": 11
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 30,
+        "fields": {
+            "category": 3,
+            "name": "Dodge",
+            "model": "1969",
+            "number_plate": "WBA8Z5C59FD668326",
+            "color": "Teal",
+            "car_image": "cars/cars_image/ (5).png",
+            "price": 3
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 31,
+        "fields": {
+            "category": 1,
+            "name": "Dodge",
+            "model": "1995",
+            "number_plate": "JM1NC2LFXF0006471",
+            "color": "Orange",
+            "car_image": "cars/cars_image/ (6).png",
+            "price": 20
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 32,
+        "fields": {
+            "category": 1,
+            "name": "Volkswagen",
+            "model": "2009",
+            "number_plate": "5TFBW5F17CX158707",
+            "color": "Indigo",
+            "car_image": "cars/cars_image/ (7).png",
+            "price": 16
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 33,
+        "fields": {
+            "category": 6,
+            "name": "Bentley",
+            "model": "2007",
+            "number_plate": "1HGCR2F33FA819430",
+            "color": "Teal",
+            "car_image": "cars/cars_image/ (8).png",
+            "price": 24
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 34,
+        "fields": {
+            "category": 1,
+            "name": "Mazda",
+            "model": "1989",
+            "number_plate": "5N1AR1NB5CC293113",
+            "color": "Mauv",
+            "car_image": "cars/cars_image/ (9).png",
+            "price": 1
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 35,
+        "fields": {
+            "category": 2,
+            "name": "Aptera",
+            "model": "2009",
+            "number_plate": "5LMJJ2JT9FE772054",
+            "color": "Blue",
+            "car_image": "cars/cars_image/ (10).png",
+            "price": 23
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 36,
+        "fields": {
+            "category": 3,
+            "name": "Toyota",
+            "model": "1994",
+            "number_plate": "WBANA73545C275120",
+            "color": "Maroon",
+            "car_image": "cars/cars_image/ (1).png",
+            "price": 19
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 37,
+        "fields": {
+            "category": 1,
+            "name": "Isuzu",
+            "model": "2006",
+            "number_plate": "4T3BA3BB5FU119494",
+            "color": "Yellow",
+            "car_image": "cars/cars_image/ (2).png",
+            "price": 18
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 38,
+        "fields": {
+            "category": 1,
+            "name": "Mazda",
+            "model": "1999",
+            "number_plate": "WBAWL73559P470821",
+            "color": "Indigo",
+            "car_image": "cars/cars_image/ (3).png",
+            "price": 21
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 39,
+        "fields": {
+            "category": 4,
+            "name": "Toyota",
+            "model": "1996",
+            "number_plate": "1G4PT5SVXE4104325",
+            "color": "Blue",
+            "car_image": "cars/cars_image/ (4).png",
+            "price": 16
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 40,
+        "fields": {
+            "category": 4,
+            "name": "Chevrolet",
+            "model": "2007",
+            "number_plate": "3N1BC1CPXCK096895",
+            "color": "Blue",
+            "car_image": "cars/cars_image/ (5).png",
+            "price": 17
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 41,
+        "fields": {
+            "category": 4,
+            "name": "GMC",
+            "model": "2012",
+            "number_plate": "1GKKRNED1EJ648668",
+            "color": "Pink",
+            "car_image": "cars/cars_image/ (6).png",
+            "price": 29
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 42,
+        "fields": {
+            "category": 4,
+            "name": "Honda",
+            "model": "2009",
+            "number_plate": "SAJWA0F79F8744185",
+            "color": "Khaki",
+            "car_image": "cars/cars_image/ (7).png",
+            "price": 17
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 43,
+        "fields": {
+            "category": 5,
+            "name": "Honda",
+            "model": "2010",
+            "number_plate": "1N6AD0CW7EN655711",
+            "color": "Blue",
+            "car_image": "cars/cars_image/ (8).png",
+            "price": 1
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 44,
+        "fields": {
+            "category": 6,
+            "name": "BMW",
+            "model": "2009",
+            "number_plate": "WAUHF78P59A582922",
+            "color": "Aquamarine",
+            "car_image": "cars/cars_image/ (9).png",
+            "price": 7
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 45,
+        "fields": {
+            "category": 7,
+            "name": "Chrysler",
+            "model": "2008",
+            "number_plate": "WBAVB17556N932002",
+            "color": "Indigo",
+            "car_image": "cars/cars_image/ (10).png",
+            "price": 12
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 46,
+        "fields": {
+            "category": 3,
+            "name": "Jaguar",
+            "model": "2008",
+            "number_plate": "WAUKF98E77A265737",
+            "color": "Blue",
+            "car_image": "cars/cars_image/ (1).png",
+            "price": 3
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 47,
+        "fields": {
+            "category": 7,
+            "name": "Saab",
+            "model": "1999",
+            "number_plate": "JTDZN3EU7FJ506787",
+            "color": "Goldenrod",
+            "car_image": "cars/cars_image/ (2).png",
+            "price": 16
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 48,
+        "fields": {
+            "category": 2,
+            "name": "Kia",
+            "model": "2005",
+            "number_plate": "1G6AB5R30E0513770",
+            "color": "Green",
+            "car_image": "cars/cars_image/ (3).png",
+            "price": 24
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 49,
+        "fields": {
+            "category": 1,
+            "name": "Hyundai",
+            "model": "2003",
+            "number_plate": "1FTMF1E84AK573815",
+            "color": "Green",
+            "car_image": "cars/cars_image/ (4).png",
+            "price": 2
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 50,
+        "fields": {
+            "category": 7,
+            "name": "Porsche",
+            "model": "2011",
+            "number_plate": "JN8AZ1MU5EW178721",
+            "color": "Maroon",
+            "car_image": "cars/cars_image/ (5).png",
+            "price": 14
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 51,
+        "fields": {
+            "category": 2,
+            "name": "Jeep",
+            "model": "2011",
+            "number_plate": "5N1AA0ND2EN325154",
+            "color": "Red",
+            "car_image": "cars/cars_image/ (6).png",
+            "price": 3
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 52,
+        "fields": {
+            "category": 6,
+            "name": "Pontiac",
+            "model": "1974",
+            "number_plate": "4T3BA3BB6DU161458",
+            "color": "Turquoise",
+            "car_image": "cars/cars_image/ (7).png",
+            "price": 28
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 53,
+        "fields": {
+            "category": 2,
+            "name": "Ford",
+            "model": "1993",
+            "number_plate": "5UXFE4C52AL501741",
+            "color": "Mauv",
+            "car_image": "cars/cars_image/ (8).png",
+            "price": 14
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 54,
+        "fields": {
+            "category": 3,
+            "name": "Volkswagen",
+            "model": "2001",
+            "number_plate": "1N6AA0CA2DN480215",
+            "color": "Turquoise",
+            "car_image": "cars/cars_image/ (9).png",
+            "price": 28
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 55,
+        "fields": {
+            "category": 2,
+            "name": "Audi",
+            "model": "2002",
+            "number_plate": "1J4AA2D15AL515134",
+            "color": "Turquoise",
+            "car_image": "cars/cars_image/ (10).png",
+            "price": 12
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 56,
+        "fields": {
+            "category": 1,
+            "name": "Dodge",
+            "model": "2000",
+            "number_plate": "WAUEL94FX5N320241",
+            "color": "Fuscia",
+            "car_image": "cars/cars_image/ (1).png",
+            "price": 12
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 57,
+        "fields": {
+            "category": 7,
+            "name": "Nissan",
+            "model": "2002",
+            "number_plate": "WA1UFAFL2DA706887",
+            "color": "Red",
+            "car_image": "cars/cars_image/ (2).png",
+            "price": 15
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 58,
+        "fields": {
+            "category": 6,
+            "name": "Toyota",
+            "model": "2006",
+            "number_plate": "WAUML54B03N751301",
+            "color": "Yellow",
+            "car_image": "cars/cars_image/ (3).png",
+            "price": 6
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 59,
+        "fields": {
+            "category": 2,
+            "name": "Pontiac",
+            "model": "1987",
+            "number_plate": "WAUSH78E66A852623",
+            "color": "Orange",
+            "car_image": "cars/cars_image/ (4).png",
+            "price": 3
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 60,
+        "fields": {
+            "category": 1,
+            "name": "GMC",
+            "model": "2008",
+            "number_plate": "5J6TF3H52FL854728",
+            "color": "Fuscia",
+            "car_image": "cars/cars_image/ (5).png",
+            "price": 22
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 61,
+        "fields": {
+            "category": 7,
+            "name": "Acura",
+            "model": "1994",
+            "number_plate": "WBASP2C59CC452004",
+            "color": "Green",
+            "car_image": "cars/cars_image/ (6).png",
+            "price": 24
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 62,
+        "fields": {
+            "category": 5,
+            "name": "Cadillac",
+            "model": "2008",
+            "number_plate": "WAUUL68E95A034934",
+            "color": "Green",
+            "car_image": "cars/cars_image/ (7).png",
+            "price": 24
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 63,
+        "fields": {
+            "category": 5,
+            "name": "GMC",
+            "model": "1996",
+            "number_plate": "WBAKN9C57ED640449",
+            "color": "Violet",
+            "car_image": "cars/cars_image/ (8).png",
+            "price": 13
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 64,
+        "fields": {
+            "category": 7,
+            "name": "Oldsmobile",
+            "model": "1997",
+            "number_plate": "3N1AB6AP8AL628828",
+            "color": "Fuscia",
+            "car_image": "cars/cars_image/ (9).png",
+            "price": 6
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 65,
+        "fields": {
+            "category": 5,
+            "name": "Audi",
+            "model": "2008",
+            "number_plate": "5N1AT2ML3EC531318",
+            "color": "Violet",
+            "car_image": "cars/cars_image/ (10).png",
+            "price": 1
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 66,
+        "fields": {
+            "category": 4,
+            "name": "Hyundai",
+            "model": "2012",
+            "number_plate": "5N1AA0NE6FN880778",
+            "color": "Yellow",
+            "car_image": "cars/cars_image/ (1).png",
+            "price": 25
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 67,
+        "fields": {
+            "category": 4,
+            "name": "Smart",
+            "model": "2012",
+            "number_plate": "3LNHL2GC6BR884160",
+            "color": "Red",
+            "car_image": "cars/cars_image/ (2).png",
+            "price": 26
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 68,
+        "fields": {
+            "category": 1,
+            "name": "Infiniti",
+            "model": "2010",
+            "number_plate": "2HNYD18846H218013",
+            "color": "Red",
+            "car_image": "cars/cars_image/ (3).png",
+            "price": 16
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 69,
+        "fields": {
+            "category": 1,
+            "name": "Lamborghini",
+            "model": "2012",
+            "number_plate": "WAUDH78E96A306231",
+            "color": "Puce",
+            "car_image": "cars/cars_image/ (4).png",
+            "price": 30
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 70,
+        "fields": {
+            "category": 3,
+            "name": "Volkswagen",
+            "model": "1995",
+            "number_plate": "JN1CV6EK6AM397352",
+            "color": "Orange",
+            "car_image": "cars/cars_image/ (5).png",
+            "price": 1
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 71,
+        "fields": {
+            "category": 5,
+            "name": "Buick",
+            "model": "1991",
+            "number_plate": "WAUWFBFL8CA696396",
+            "color": "Indigo",
+            "car_image": "cars/cars_image/ (6).png",
+            "price": 7
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 72,
+        "fields": {
+            "category": 6,
+            "name": "Hyundai",
+            "model": "1997",
+            "number_plate": "WBABV13425J123974",
+            "color": "Aquamarine",
+            "car_image": "cars/cars_image/ (7).png",
+            "price": 26
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 73,
+        "fields": {
+            "category": 2,
+            "name": "Dodge",
+            "model": "2002",
+            "number_plate": "WBAHN03566D085095",
+            "color": "Goldenrod",
+            "car_image": "cars/cars_image/ (8).png",
+            "price": 14
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 74,
+        "fields": {
+            "category": 3,
+            "name": "BMW",
+            "model": "2010",
+            "number_plate": "5GALRCED0AJ207534",
+            "color": "Turquoise",
+            "car_image": "cars/cars_image/ (9).png",
+            "price": 8
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 75,
+        "fields": {
+            "category": 7,
+            "name": "Ford",
+            "model": "1995",
+            "number_plate": "2C3CDYCJ4EH813739",
+            "color": "Purple",
+            "car_image": "cars/cars_image/ (10).png",
+            "price": 3
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 76,
+        "fields": {
+            "category": 1,
+            "name": "Volvo",
+            "model": "2007",
+            "number_plate": "2B3CA3CV0AH586653",
+            "color": "Crimson",
+            "car_image": "cars/cars_image/ (1).png",
+            "price": 4
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 77,
+        "fields": {
+            "category": 4,
+            "name": "Audi",
+            "model": "2002",
+            "number_plate": "JH4CL96848C796685",
+            "color": "Puce",
+            "car_image": "cars/cars_image/ (2).png",
+            "price": 19
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 78,
+        "fields": {
+            "category": 4,
+            "name": "Plymouth",
+            "model": "1996",
+            "number_plate": "WBA3A5G52CN139527",
+            "color": "Khaki",
+            "car_image": "cars/cars_image/ (3).png",
+            "price": 27
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 79,
+        "fields": {
+            "category": 5,
+            "name": "Ford",
+            "model": "2007",
+            "number_plate": "SCBZU25E31C126786",
+            "color": "Aquamarine",
+            "car_image": "cars/cars_image/ (4).png",
+            "price": 24
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 80,
+        "fields": {
+            "category": 5,
+            "name": "Volkswagen",
+            "model": "1993",
+            "number_plate": "WDDGF4HBXCR337436",
+            "color": "Pink",
+            "car_image": "cars/cars_image/ (5).png",
+            "price": 17
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 81,
+        "fields": {
+            "category": 3,
+            "name": "Acura",
+            "model": "2011",
+            "number_plate": "WBA3N3C57EK922975",
+            "color": "Violet",
+            "car_image": "cars/cars_image/ (6).png",
+            "price": 23
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 82,
+        "fields": {
+            "category": 6,
+            "name": "Mazda",
+            "model": "2001",
+            "number_plate": "JHMZE2H30ES286171",
+            "color": "Red",
+            "car_image": "cars/cars_image/ (7).png",
+            "price": 15
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 83,
+        "fields": {
+            "category": 5,
+            "name": "Porsche",
+            "model": "1987",
+            "number_plate": "YV1982BW9A1892428",
+            "color": "Maroon",
+            "car_image": "cars/cars_image/ (8).png",
+            "price": 24
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 84,
+        "fields": {
+            "category": 3,
+            "name": "Ford",
+            "model": "1984",
+            "number_plate": "1GYS4EEJ3BR168123",
+            "color": "Khaki",
+            "car_image": "cars/cars_image/ (9).png",
+            "price": 23
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 85,
+        "fields": {
+            "category": 3,
+            "name": "Bentley",
+            "model": "2009",
+            "number_plate": "WBA1F5C59EV878265",
+            "color": "Green",
+            "car_image": "cars/cars_image/ (10).png",
+            "price": 28
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 86,
+        "fields": {
+            "category": 4,
+            "name": "Mercedes-Benz",
+            "model": "2010",
+            "number_plate": "WBANA53515B619531",
+            "color": "Yellow",
+            "car_image": "cars/cars_image/ (1).png",
+            "price": 19
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 87,
+        "fields": {
+            "category": 7,
+            "name": "Mazda",
+            "model": "1999",
+            "number_plate": "1GYS4CEF8DR120863",
+            "color": "Turquoise",
+            "car_image": "cars/cars_image/ (2).png",
+            "price": 30
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 88,
+        "fields": {
+            "category": 5,
+            "name": "Suzuki",
+            "model": "1996",
+            "number_plate": "W04GT5GC9B1489380",
+            "color": "Orange",
+            "car_image": "cars/cars_image/ (3).png",
+            "price": 3
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 89,
+        "fields": {
+            "category": 1,
+            "name": "Saturn",
+            "model": "2006",
+            "number_plate": "WBA6B4C52DD005215",
+            "color": "Goldenrod",
+            "car_image": "cars/cars_image/ (4).png",
+            "price": 18
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 90,
+        "fields": {
+            "category": 1,
+            "name": "Jeep",
+            "model": "2012",
+            "number_plate": "SCBBP9ZA3DC705192",
+            "color": "Indigo",
+            "car_image": "cars/cars_image/ (5).png",
+            "price": 28
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 91,
+        "fields": {
+            "category": 2,
+            "name": "Cadillac",
+            "model": "1999",
+            "number_plate": "JN8AF5MR8CT083757",
+            "color": "Violet",
+            "car_image": "cars/cars_image/ (6).png",
+            "price": 2
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 92,
+        "fields": {
+            "category": 5,
+            "name": "Chevrolet",
+            "model": "1993",
+            "number_plate": "WBAWB33547P786445",
+            "color": "Maroon",
+            "car_image": "cars/cars_image/ (7).png",
+            "price": 23
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 93,
+        "fields": {
+            "category": 6,
+            "name": "Honda",
+            "model": "2001",
+            "number_plate": "19XFA1E56AE709736",
+            "color": "Orange",
+            "car_image": "cars/cars_image/ (8).png",
+            "price": 6
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 94,
+        "fields": {
+            "category": 6,
+            "name": "Oldsmobile",
+            "model": "1966",
+            "number_plate": "WBAEJ13481A609160",
+            "color": "Pink",
+            "car_image": "cars/cars_image/ (9).png",
+            "price": 26
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 95,
+        "fields": {
+            "category": 4,
+            "name": "Pontiac",
+            "model": "1989",
+            "number_plate": "JH4CU2F62BC624729",
+            "color": "Yellow",
+            "car_image": "cars/cars_image/ (10).png",
+            "price": 21
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 96,
+        "fields": {
+            "category": 6,
+            "name": "Lexus",
+            "model": "2011",
+            "number_plate": "WAU3GAFR4EA478411",
+            "color": "Goldenrod",
+            "car_image": "cars/cars_image/default.png",
+            "price": 28
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 97,
+        "fields": {
+            "category": 7,
+            "name": "Volvo",
+            "model": "2005",
+            "number_plate": "JTHFN2EY4A9501085",
+            "color": "Red",
+            "car_image": "cars/cars_image/default.png",
+            "price": 25
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 98,
+        "fields": {
+            "category": 4,
+            "name": "BMW",
+            "model": "2009",
+            "number_plate": "1FTEW1CF0FF106980",
+            "color": "Pink",
+            "car_image": "cars/cars_image/default.png",
+            "price": 11
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 99,
+        "fields": {
+            "category": 4,
+            "name": "Mercedes-Benz",
+            "model": "2005",
+            "number_plate": "JHMZF1C65CS805544",
+            "color": "Turquoise",
+            "car_image": "cars/cars_image/default.png",
+            "price": 5
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 100,
+        "fields": {
+            "category": 2,
+            "name": "Mercedes-Benz",
+            "model": "2006",
+            "number_plate": "JN8AE2KP3E9482143",
+            "color": "Orange",
+            "car_image": "cars/cars_image/default.png",
+            "price": 16
+        }
+    },
+    {
+        "model": "cars.car",
+        "pk": 101,
+        "fields": {
+            "category": 3,
+            "name": "GMC",
+            "model": "1997",
+            "number_plate": "2C4JDGAG9CR197192",
+            "color": "Maroon",
+            "car_image": "cars/cars_image/default.png",
+            "price": 4
+        }
+    },
+    {
+        "model": "cars.reservation",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "car": 37,
+            "driver": "wd",
+            "start_date": "1402-11-11",
+            "end_date": "1402-11-13",
+            "delivery_address": "asfdasfd",
+            "is_paid": "p"
+        }
+    },
+    {
+        "model": "cars.reservation",
+        "pk": 2,
+        "fields": {
+            "user": 1,
+            "car": 1,
+            "driver": "1",
+            "start_date": "1402-11-11",
+            "end_date": "1402-11-13",
+            "delivery_address": "سبسب",
+            "is_paid": "up"
+        }
+    },
+    {
+        "model": "cars.reservation",
+        "pk": 3,
+        "fields": {
+            "user": 1,
+            "car": 8,
+            "driver": "wd",
+            "start_date": "1402-11-11",
+            "end_date": "1402-11-18",
+            "delivery_address": "drgdre",
+            "is_paid": "up"
+        }
+    },
+    {
+        "model": "cars.reservation",
+        "pk": 4,
+        "fields": {
+            "user": 1,
+            "car": 53,
+            "driver": "wd",
+            "start_date": "1402-11-12",
+            "end_date": "1402-11-14",
+            "delivery_address": "ad",
+            "is_paid": "up"
+        }
+    },
+    {
+        "model": "cars.reservation",
+        "pk": 5,
+        "fields": {
+            "user": 1,
+            "car": 53,
+            "driver": "wd",
+            "start_date": "1402-11-12",
+            "end_date": "1402-11-14",
+            "delivery_address": "ad",
+            "is_paid": "up"
+        }
+    },
+    {
+        "model": "cars.reservation",
+        "pk": 6,
+        "fields": {
+            "user": 1,
+            "car": 37,
+            "driver": "wd",
+            "start_date": "1402-11-13",
+            "end_date": "1402-11-15",
+            "delivery_address": "sadfsdf",
+            "is_paid": "up"
+        }
+    },
+    {
+        "model": "cars.reservation",
+        "pk": 7,
+        "fields": {
+            "user": 1,
+            "car": 37,
+            "driver": "wd",
+            "start_date": "1402-11-13",
+            "end_date": "1402-11-15",
+            "delivery_address": "afsa",
+            "is_paid": "up"
+        }
+    },
+    {
+        "model": "cars.reservation",
+        "pk": 8,
+        "fields": {
+            "user": 1,
+            "car": 3,
+            "driver": "wd",
+            "start_date": "1402-11-13",
+            "end_date": "1402-11-15",
+            "delivery_address": "fh",
+            "is_paid": "up"
+        }
+    },
+    {
+        "model": "pages.page",
+        "pk": 1,
+        "fields": {
+            "title": "درباره ما",
+            "slug": "aboutus",
+            "body": "<div class=\"div-mid\">\r\n    <div class=\"container my-5\">\r\n        <div class=\"row big-card\">\r\n            <div class=\"col-10 row mx-auto\">\r\n                <div class=\"col-3 big-card-right\"></div>\r\n                <div class=\"col-9 big-card-left\">\r\n                    <h4 class=\"mb-5\">درباره با ما</h4>\r\n                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque ipsa culpa repellendus mollitia eveniet molestias magnam deserunt, error aut consectetur obcaecati adipisci eligendi fuga nihil assumenda, facilis aliquid ea sunt.</p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>",
+            "is_active": true
+        }
+    },
+    {
+        "model": "pages.page",
+        "pk": 2,
+        "fields": {
+            "title": "تماس با ما",
+            "slug": "contactus",
+            "body": "<div class=\"div-mid\">\r\n    <div class=\"container my-5\">\r\n        <div class=\"row big-card\">\r\n            <div class=\"col-10 row mx-auto\">\r\n                <div class=\"col-3 big-card-right\"></div>\r\n                <div class=\"col-9 big-card-left\">\r\n                    <h4 class=\"mb-5\">تماس با ما</h4>\r\n                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque ipsa culpa repellendus mollitia eveniet molestias magnam deserunt, error aut consectetur obcaecati adipisci eligendi fuga nihil assumenda, facilis aliquid ea sunt.</p>\r\n                    <ul class=\"list-group list-group-flush mb-3\">\r\n                        <li class=\"list-group-item\">شماره: 0656566565</li>\r\n                        <li class=\"list-group-item\">تلگرام tel.com</li>\r\n                        <li class=\"list-group-item\">اینستا گراکم</li>\r\n                        <li class=\"list-group-item\">واتساپ </li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>",
+            "is_active": true
+        }
+    }
+]
