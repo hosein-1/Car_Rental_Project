@@ -106,15 +106,19 @@ def user_profile(request):
 
 def search(request):
     search_query = request.GET.get('q')
+    category_query = request.GET.get('category')
+    
+    search_list = Car.objects.all()
+
+    if category_query and category_query != '-1':
+        search_list = search_list.filter(category_id=category_query)
 
     if search_query:
-        search_list = Car.objects.filter(
+        search_list = search_list.filter(
             Q(name__icontains=search_query) | Q(category__name__icontains=search_query) | Q(model__icontains=search_query)
         )
-    else:
-        search_list = Car.objects.none()
 
-    paginator = Paginator(search_list, 1)
+    paginator = Paginator(search_list, 12)
     page_number = request.GET.get('page', 1)
     try:
         object_list = paginator.page(page_number)
@@ -125,6 +129,8 @@ def search(request):
 
     context = {
         'query': search_query,
+        'category_selected': int(category_query),
+        'categories': Category.objects.all(),
         'object_list': object_list,
         'pages': object_list,
         'banner': False,
@@ -136,32 +142,3 @@ def search(request):
     return render(request, 'cars/search_list.html', context)
 
 
-def filter_cars(request):
-    categories = Category.objects.all()
-    category_query = request.GET.get('category')
-
-    if category_query:
-        category_list = Car.objects.filter(category_id=category_query)
-    else:
-        category_list = Car.objects.none()
-
-    paginator = Paginator(category_list, 1)
-    page_number = request.GET.get('page', 1)
-    try:
-        object_list = paginator.page(page_number)
-    except EmptyPage:
-        object_list = paginator.page(paginator.num_pages)
-    except PageNotAnInteger:
-        object_list = paginator.page(1)
-
-    context = {
-        'categories': categories,
-        'object_list': object_list,
-        'pages': object_list,
-        'banner': False,
-        'last_page': max(object_list.paginator.page_range),
-        'pagens': range(object_list.number - 4, object_list.number + 5),
-
-    }
-
-    return render(request, 'cars/search_list.html', context)
