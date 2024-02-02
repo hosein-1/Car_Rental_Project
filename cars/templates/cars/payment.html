@@ -15,7 +15,7 @@
                     <p>برای نهایی کردن رزرو خود، خرید خود را تکمیل کنید.</p>
                     <form action="" method="post">
                         {% csrf_token %}
-                        <p>مبلغ قابل پرداخت:{{ total_price }}</p>
+                        <p>مبلغ قابل پرداخت: {{ total_price }}میلیون تومان</p>
                         <input class="btn btn-primary" type="submit" value="پرداخت">
                     </form>
                     {% else %}
