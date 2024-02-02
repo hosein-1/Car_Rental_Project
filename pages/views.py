@@ -16,8 +16,41 @@ def page(request, slug):
 
 
 
+def questions_list(request):
+    questions = Questions.objects.filter(parent=None)
+
+    context = {
+        'questions': questions,
+        'banner': False,
+    }
+    return render(request, 'pages/questions_list.html', context)
+
+
 def ask_question(request):
-    questions = Questions.objects.all()
+    if request.method == 'POST':
+        form = QuestionForm(request.POST)
+        if form.is_valid():
+            question_object = form.save(commit=False)
+            question_object.author = request.user
+            try:
+                question_object.parent = form.cleaned_data['parent']
+
+            except:
+                question_object.parent = None
+            form.save()
+    else:
+        form = QuestionForm()
+
+    context = {
+        'form': form,
+        'question_id': form,
+        'banner': False,
+    }
+    return render(request, 'pages/ask_questions.html', context)
+
+
+def question(request, id):
+    question_obj = get_object_or_404(Questions.objects.filter(parent=None), id=id)
 
     if request.method == 'POST':
         form = QuestionForm(request.POST)
@@ -30,11 +63,14 @@ def ask_question(request):
             except:
                 question_object.parent = None
             form.save()
-
-        return render(request, 'pages/questions.html', {'form': form, 'questions': questions})
-
     else:
         form = QuestionForm()
-        return render(request, 'pages/questions.html', {'form': form, 'questions': questions})
+
+    context = {
+        'form': form,
+        'question': question_obj,
+        'banner': False,
+    }
+    return render(request, 'pages/question.html', context)
 
 

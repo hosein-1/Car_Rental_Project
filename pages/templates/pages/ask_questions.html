@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}پرسش سوال{% endblock title %}
+
+
+{% block body %}
+<div class="div-mid">
+    <div class="container my-5">
+        <div class="row big-card">
+            <div class="col-6 row mx-auto">
+                <div class="col-3 big-card-right"></div>
+                <div class="col-9 big-card-left">
+                    <h4 class="mb-5">سوال خود را بپرسید!</h4>
+                    {% if user.is_authenticated %}
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="title_q" class="form-label">عنوان سوال</label>
+                            <input name="title" class="form-control" id="title_q" required/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="body_q" class="form-label">متن سوال</label>
+                            <textarea name="body" class="form-control" id="body_q" rows="3" required></textarea>
+                        </div>
+                        <input class="btn btn-primary" type="submit" value="ثبت">
+                    </form>
+                    {% else %}
+                    <p>برای پرسش سوال لازم است وارد شده یا ثبت‌نام کنید </p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

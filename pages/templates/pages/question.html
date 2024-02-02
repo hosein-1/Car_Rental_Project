@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}سوال شما{% endblock title %}
+
+
+{% block body %}
+{% if question.is_parent %}
+<section class="gradient-custom">
+    <div class="container my-5 py-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-12 col-lg-10 col-xl-8">
+                <div class="card">
+                    <div class="card-body p-4 flex-column">
+                        <h4 class="text-center mb-4 pb-2">{{ question.title }}</h4>
+                        <div class="row">
+                            <div class="col">
+                                <div class="d-flex flex-start">
+                                    <img class="rounded-circle shadow-1-strong ms-3"
+                                        src="{% static 'img/user-avatar.png' %}" alt="avatar"
+                                        width="65" height="65" />
+                                    <div class="flex-grow-1 flex-shrink-1">
+                                        <div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <p class="mb-1">
+                                                    {{ question.author }}
+                                                </p>
+                                            </div>
+                                            <p class="small mb-0">
+                                                {{ question.body }}
+                                            </p>
+                                        </div>
+                                        {% for replies in question.children %}
+                                        <div class="d-flex flex-start mt-4">
+                                            <a class="ms-3" href="#">
+                                                <img class="rounded-circle shadow-1-strong"
+                                                    src="{% static 'img/user-avatar.png' %}"
+                                                    alt="avatar" width="65" height="65" />
+                                            </a>
+                                            <div class="flex-grow-1 flex-shrink-1">
+                                                <div>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <p class="mb-1">
+                                                            {{ replies.author }}
+                                                        </p>
+                                                    </div>
+                                                    <p class="small mb-0">
+                                                        {{ replies.body }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer py-3 border-0" style="background-color: #f8f9fa;">
+                        {% if user.id == question.author_id or user.is_superuser %}
+                        <form action="" method="POST">
+                            <div class="d-flex flex-start w-100">
+                                <img class="rounded-circle shadow-1-strong me-3"
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(19).webp" alt="avatar"
+                                    width="40" height="40" />
+                                <div class="form-outline w-100">
+
+                                    {% csrf_token %}
+                                    <div>
+                                        <input type="hidden" value="{{ question.pk }}" name="parent">
+                                        <label class="form-label" for="textAreaExample">Message</label>
+                                        <textarea name="body" class="form-control" id="textAreaExample" rows="4"
+                                            style="background: #fff;"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="float-end mt-2 pt-1">
+                                <button type="submit" class="btn btn-primary btn-sm">Post comment</button>
+                            </div>
+                        </form>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endif %}
+
+{% endblock body %}

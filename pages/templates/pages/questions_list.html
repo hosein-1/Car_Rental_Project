@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}سوال شما{% endblock title %}
+
+
+{% block body %}
+<div class="div-mid">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-10 row mx-auto">
+                <div class="position-relative">
+                    <h4 class="">سوالات متداول شما</h4>
+                    <a href="{% url 'ask_question' %}" class="btn btn-outline-primary position-absolute top-0 start-0">پرسش سوال جدید</a>
+                </div>
+                <ul class="list-group list-group-flush mb-3">
+                    {% for question in questions %}
+                    {% if question.is_parent %}
+                    <li class="list-group-item">
+                        <a href="{% url 'question' question.id %}">{{ question.title }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
