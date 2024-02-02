@@ -129,7 +129,7 @@ def search(request):
 
     context = {
         'query': search_query,
-        'category_selected': category_query,
+        'category_selected': int(category_query),
         'categories': Category.objects.all(),
         'object_list': object_list,
         'pages': object_list,
