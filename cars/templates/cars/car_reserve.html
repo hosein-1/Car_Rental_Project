@@ -24,7 +24,7 @@
                     <form action="" method="post">
                         {% csrf_token %}
                         {{ form.as_p }}
-                        <input type="submit" value="رزرو">
+                        <input class="btn btn-primary" type="submit" value="رزرو">
                     </form>
                     {% else %}
                     <p>برای رزرو ماشین ابتدا وارد شوید.</p>

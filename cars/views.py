@@ -73,7 +73,7 @@ def car_reserve(request, id):
 
 @login_required()
 def payment(request):
-    reserve_object = Reservation.objects.filter(user_id=request.user.id).filter(is_paid='up').first()
+    reserve_object = Reservation.objects.filter(user_id=request.user.id).filter(is_paid='up').last()
     if reserve_object:
         total_price = (reserve_object.end_date.day - reserve_object.start_date.day) * reserve_object.car.price
 
@@ -129,7 +129,7 @@ def search(request):
 
     context = {
         'query': search_query,
-        'category_selected': int(category_query),
+        'category_selected': category_query,
         'categories': Category.objects.all(),
         'object_list': object_list,
         'pages': object_list,
