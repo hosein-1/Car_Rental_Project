@@ -3,14 +3,6 @@ from django.contrib.auth.models import AbstractUser
 
 
 class CustomUser(AbstractUser):
-    CUSTOMER = 'c'
-    DRIVER = 'd'
-    ADMIN = 'a'
-    USER_STATUS = [
-        (CUSTOMER, 'customer'),
-        (DRIVER, 'driver'),
-        (ADMIN, 'admin')
-    ]
     email = models.EmailField(verbose_name='آدرس ایمیل', unique=True)
     first_name = models.CharField(verbose_name='نام', max_length=255)
     last_name = models.CharField(verbose_name='نام خانوادگی', max_length=255)

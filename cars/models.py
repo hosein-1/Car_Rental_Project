@@ -27,6 +27,7 @@ class Car(models.Model):
     class Meta:
         verbose_name = 'ماشین'
         verbose_name_plural = 'ماشین'
+        ordering = ['id']
 
     def __str__(self):
         return f'{self.name}'
